@@ -133,7 +133,7 @@ jobs:
           fi
 
       - name: Remove flags if auto build disabled
-        if: hashFiles(format('p{0}/tests/DISABLE_AUTO_BUILD', matrix.problem)) != ''
+        if: hashFiles(format('p{0}/solution/DISABLE_AUTO_BUILD', matrix.problem)) != ''
         run: |
           rm -f /home/runner/flags/build-tests/${{ matrix.problem }}
           rm -f /home/runner/flags/build-input/${{ matrix.problem }}
