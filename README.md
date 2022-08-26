@@ -1,4 +1,4 @@
-# -2022NHSPC-TNFSH-Prelimilary
+# 2022NHSPC-TNFSH-Preliminary
  111學年度資訊學科能力競賽臺南一中校內初選 
 
 ## Quick Links
