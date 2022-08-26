@@ -1,0 +1,88 @@
+name: New problem
+
+on:
+  workflow_dispatch:
+    inputs:
+      count:
+        description: 'How many problems in this contest?'
+
+jobs:
+  create:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get install dos2unix python3-setuptools
+          sudo python3 -m pip install psutil
+
+      - name: Install tps
+        run: |
+          bash -c "$(curl -fsSL https://raw.githubusercontent.com/ioi-2017/tps/master/online-installer/install.sh)"
+
+      - name: Download templates
+        uses: actions/checkout@v3
+        with:
+          repository: 'TNFSH-Programming-Contest/tps-task-templates'
+          path: 'tps-task-templates'
+
+      - name: New problem
+        shell: python
+        run: |
+          import json
+          import os
+          import subprocess
+
+          prob_cnt = '${{ inputs.count }}'
+
+          try:
+            prob_cnt = int(prob_cnt)
+          except:
+            print('Please input a number')
+            exit(1)
+
+          if prob_cnt < 1 or prob_cnt > 26:
+            print('Must be 1 ~ 26')
+            exit(1)
+
+          with open('.problems.json', 'r', encoding='utf8') as f:
+            problems = json.load(f)
+          with open('Makefile', 'r', encoding='utf8') as f:
+            makefile = f.read()
+          with open('README.md', 'r', encoding='utf8') as f:
+            readme = f.read()
+          for i in range(prob_cnt):
+            label = chr(ord('A') + i)
+            path = 'p{}'.format(label)
+            if not os.path.exists(path):
+              subprocess.run(['tps', 'init', path, '-T', 'tps-task-templates', '-t', 'default'])
+              subprocess.run(['git', 'add', path])
+
+              problems.append(label)
+              makefile = makefile.replace('# NEWPROBELM', 'import-{0}:\n\tcmsImportTask ./{0}/ -u $(if $(s), , --no-statement)\n\n# NEWPROBELM'.format(path))
+              readme = readme.replace('<!-- new problem -->', '| {0} | [statement]({1}/statement) [md]({1}/statement/index.md) [pdf]({1}/statement/index.pdf) | [gen]({1}/gen) | [validator]({1}/validator) | [solution]({1}/solution) [check]({1}/solutions-check.txt) | [tests]({1}/tests) | [problem]({1}/problem.json) [solutions]({1}/solutions.json) [subtasks]({1}/subtasks.json) |\n<!-- new problem -->'.format(label, path))
+            else:
+              print('{} is exists'.format(path))
+          with open('.problems.json', 'w', encoding='utf8') as f:
+            json.dump(problems, f)
+          with open('Makefile', 'w', encoding='utf8') as f:
+            f.write(makefile)
+          with open('README.md', 'w', encoding='utf8') as f:
+            f.write(readme)
+
+      - name: Commit files
+        run: |
+          git add .problems.json
+          git add Makefile
+          git add README.md
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "Create ${{ inputs.count }} problems"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}

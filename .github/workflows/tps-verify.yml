@@ -1,0 +1,54 @@
+name: TPS verify
+
+on:
+  push:
+    branches:
+      - '**'
+    paths:
+      - 'p*/**'
+  workflow_dispatch:
+    inputs:
+      target:
+        description: 'Problem labels to verify'
+        default: ''
+
+jobs:
+  verify:
+    if: ${{ github.event_name == 'push' && github.repository != 'TNFSH-Programming-Contest/tps-starter' }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        problem: [A] # NEWPROBLEM
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get install dos2unix python3-setuptools
+          sudo python3 -m pip install psutil
+
+      - name: Install tps
+        run: |
+          git clone https://github.com/ioi-2017/tps.git
+          cd tps && sudo ./install-tps.sh
+
+      - uses: dorny/paths-filter@v2
+        id: changes
+        with:
+          filters: |
+            any:
+              - p${{ matrix.problem }}/**
+
+      - name: Verify
+        if: (github.event_name == 'push' && steps.changes.outputs.any == 'true') || (github.event_name == 'workflow_dispatch' && contains(github.event.inputs.target, matrix.problem))
+        working-directory: p${{ matrix.problem }}
+        run: |
+          set +e
+
+          tps verify | tee verify-result.txt
+          grep "ERROR:" verify-result.txt >/dev/null
+          if [ $? -eq 0 ]; then
+            exit 1
+          fi
