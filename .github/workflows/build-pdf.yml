@@ -20,10 +20,10 @@ on:
 
 jobs:
   problem-list:
-     runs-on: ubuntu-latest
-     outputs:
-        matrix: ${{ steps.problem-list.outputs.matrix }}
-     steps:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.problem-list.outputs.matrix }}
+    steps:
       - uses: actions/checkout@v3
 
       - name: Read problems

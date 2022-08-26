@@ -13,12 +13,26 @@ on:
         default: ''
 
 jobs:
+  problem-list:
+    if: ${{ github.repository != 'TNFSH-Programming-Contest/tps-starter' }}
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.problem-list.outputs.matrix }}
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Read problems
+      id: problem-list
+      run: |
+        problems=$(cat .problems.json)
+        echo "::set-output name=matrix::$problems"
+
   verify:
-    if: ${{ github.event_name == 'push' && github.repository != 'TNFSH-Programming-Contest/tps-starter' }}
+    needs: [problem-list]
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        problem: [A] # NEWPROBLEM
+        problem: ${{ fromJson(needs.problem-list.outputs.matrix) }}
       fail-fast: false
 
     steps:
@@ -42,7 +56,7 @@ jobs:
               - p${{ matrix.problem }}/**
 
       - name: Verify
-        if: (github.event_name == 'push' && steps.changes.outputs.any == 'true') || (github.event_name == 'workflow_dispatch' && contains(github.event.inputs.target, matrix.problem))
+        if: ${{ (github.event_name == 'push' && steps.changes.outputs.any == 'true') || (github.event_name == 'workflow_dispatch' && contains(github.event.inputs.target, matrix.problem)) }}
         working-directory: p${{ matrix.problem }}
         run: |
           set +e
