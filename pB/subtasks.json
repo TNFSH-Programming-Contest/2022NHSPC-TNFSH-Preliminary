@@ -1,19 +1,31 @@
 {
     "global_validators": [
-        "validator.cpp"
+        "task2_val.cpp"
     ],
     "subtasks": {
         "samples": {
             "index": 0,
             "score": 0,
             "text": "範例輸入輸出",
-            "validators": []
+            "validators": [
+                "task2_val.cpp"
+            ]
         },
-        "full": {
+        "task1": {
+            "index": 1,
+            "score": 100,
+            "text": "$\\forall \\; 1 \\leq i \\leq 2n, \\; a_i$ 皆為奇數或皆為偶數",
+            "validators": [
+                "task1_val.cpp"
+            ]
+        },
+        "task2": {
             "index": 1,
             "score": 100,
             "text": "無額外限制",
-            "validators": []
+            "validators": [
+                "task2_val.cpp"
+            ]
         }
     }
 }
