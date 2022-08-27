@@ -7,7 +7,7 @@ int main(){
 	ios::sync_with_stdio(0);
 	cin.tie(0);
 
-	freopen("input.in", "r", stdin);
+	//freopen("input.in", "r", stdin);
 
 	cin >> n;
 	int o = 0, e = 0;
