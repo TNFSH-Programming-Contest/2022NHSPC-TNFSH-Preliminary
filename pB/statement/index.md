@@ -23,7 +23,7 @@
 
 ## 輸入限制
 - $n \leq 10^5$
-- $a_i \leq 5 \times 10^6, \; \forall \; 1 \leq i \leq 2n$
+- $a_i \leq 5 \times 10^6, \forall 1 \leq i \leq 2n$
 
 ## 子任務
 \subtasks
