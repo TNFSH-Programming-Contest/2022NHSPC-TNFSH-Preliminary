@@ -7,6 +7,7 @@ on:
     paths:
       - '*/scripts/statement.sh'
       - '*/statement/*.jpg'
+      - '*/statement/DISABLE_AUTO_BUILD'
       - '*/statement/index.md'
       - '*/problem.json'
       - '*/subtasks.json'
@@ -58,6 +59,7 @@ jobs:
             pdf:
               - p${{ matrix.problem }}/scripts/statement.sh
               - p${{ matrix.problem }}/statement/*.jpg
+              - p${{ matrix.problem }}/statement/DISABLE_AUTO_BUILD
               - p${{ matrix.problem }}/statement/index.md
               - template.tex
             cover:

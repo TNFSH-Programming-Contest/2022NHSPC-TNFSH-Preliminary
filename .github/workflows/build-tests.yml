@@ -74,6 +74,7 @@ jobs:
           filters: |
             input:
               - p${{ matrix.problem }}/gen/**
+              - p${{ matrix.problem }}/solution/DISABLE_AUTO_BUILD
             output:
               - p${{ matrix.problem }}/solution/${{ steps.env.outputs.model_solution }}
             solutions:
