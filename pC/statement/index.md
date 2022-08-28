@@ -1,4 +1,4 @@
-# 最小最大全距
+#
 
 <!-- \begin{figure}[h]
 \centering

@@ -1,4 +1,4 @@
-# 平分糖果
+#
 
 <!-- \begin{figure}[h]
 \centering
