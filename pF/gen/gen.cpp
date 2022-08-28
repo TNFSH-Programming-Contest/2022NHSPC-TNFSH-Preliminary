@@ -10,7 +10,7 @@ set<matsuri> arr,qwq;
 void gen(int n,int m,int q,int ouo)
 {
 	int k,cnt,x,y,a,b,c,d;
-	k=min(n*m/2, 1000000);
+	k=min((long long)n*m/2, 1000000LL);
 	cnt=k*2;
 	while(arr.size()<k && cnt--)
 	{
