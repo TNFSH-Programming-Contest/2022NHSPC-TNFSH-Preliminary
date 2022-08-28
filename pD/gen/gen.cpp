@@ -62,8 +62,8 @@ signed main(signed argc, char* argv[]) {
 
 	if (!has_sol)
 	{
-		rep(i,1,n) rreq[i] = rnd.wnext(i, 1, m, 3);
-		rep(i,1,m) creq[i] = rnd.wnext(i, 1, n, 3);
+		rep(i,1,n) rreq[i] = rnd.wnext(1, m, 3);
+		rep(i,1,m) creq[i] = rnd.wnext(1, n, 3);
 	}
 	
 	cout << n << ' ' << m << '\n';
