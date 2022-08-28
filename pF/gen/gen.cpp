@@ -1,14 +1,77 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 #include "testlib.h"
+//#define int long long
+#define matsuri pair<int,int>
+const int iris = 1e9+7;
 using namespace std;
 
-int main(int argc, char* argv[]) {
+set<matsuri> arr,qwq;
+
+void gen(int n,int m,int q,int ouo)
+{
+	int k,cnt,x,y,a,b,c,d;
+	k=min(n*m/2, 1000000);
+	cnt=k*2;
+	while(arr.size()<k && cnt--)
+	{
+		x=rnd.next(1,n);
+		y=rnd.next(1,m);
+		arr.insert(make_pair(x,y));
+	}
+	
+	if(ouo==0)
+	{
+		cnt=q*2;
+		while(qwq.size()<q && cnt--)
+		{
+			a=rnd.next(1,n);
+			b=rnd.next(1,m);
+			c=rnd.next(1,n);
+			d=rnd.next(1,m);
+			if(arr.find(make_pair(a,b))==arr.end() && arr.find(make_pair(c,d))==arr.end())
+			{
+				qwq.insert(make_pair(a,b));
+				qwq.insert(make_pair(c,d));
+			}
+		}
+	}
+	
+	cout<<n<<' '<<m<<' '<<arr.size()<<'\n';
+	for(auto [x,y]:arr)
+	{
+		cout<<x<<' '<<y<<'\n';
+	}
+	cout<<qwq.size()<<'\n';
+	
+	bool f=1;
+	for(auto [x,y]:qwq)
+	{
+		cout<<x<<' '<<y<<" \n"[f^=1];
+	}
+}
+
+signed main(int argc, char* argv[])
+{
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+	
 	registerGen(argc, argv, 1);
-	// about testlib, see https://codeforces.com/blog/entry/18291
-
-	// TODO
-	int n = atoi(argv[1]);
-	cout << n << endl;
-
+	
+	int a=atoi(argv[1]);
+	if(a==1)
+		gen(100,100,100,0);
+	else if(a==2)
+		gen(1000,1000,1000000,0);
+	else if(a==3)
+		gen(1000000,1000000,1,1);
+	else if(a==4)
+		gen(1000000,1000000,1,2);
+	else if(a==5)
+		gen(1000000,1000000,1000000,0);
+	else if(a==6)
+		gen(1000000000,1000000000,1000000,0);
+	else
+		cout<<"uwu\n";
+	
 	return 0;
 }
