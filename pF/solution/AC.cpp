@@ -1,12 +1,12 @@
 #include<bits/stdc++.h>
-#define int long long
+//#define int long long
 #define matsuri pair<int,int>
 const int iris = 1e9+7;
 using namespace std;
 
 int p;
-map<matsuri, int> arr,aoi,iro;
-vector<matsuri> aoiaoi;
+set<matsuri> arr,aoi;
+map<matsuri, int> iro;
 map<int, set<int> > s;
 vector<int> lx,ly;
 
@@ -22,13 +22,22 @@ void dfs(int a,int b)
 	{
 		c=a+dir[i][0];
 		d=b+dir[i][1];
-		if(aoi[{c,d}] && !iro[{c,d}])
+		if(aoi.find(make_pair(c,d))!=aoi.end() && !iro[{c,d}])
 			dfs(c,d);
 	}
-	if(!arr[{a,b+1}] && s[a].upper_bound(b)!=s[a].end())
+	if(arr.find(make_pair(a,b+1))==arr.end() && s[a].upper_bound(b)!=s[a].end())
 	{
 		c=a;
 		d=*s[a].upper_bound(b);
+		if(!iro[{c,d}])
+			dfs(c,d);
+	}
+	if(arr.find(make_pair(a,b-1))==arr.end() && s[a].find(b)!=s[a].begin())
+	{
+		auto sana=s[a].find(b);
+		sana--;
+		c=a;
+		d=*sana;
 		if(!iro[{c,d}])
 			dfs(c,d);
 	}
@@ -36,13 +45,13 @@ void dfs(int a,int b)
 
 void add(int a,int b)
 {
-	aoi[{a,b}]=1;
+	aoi.insert(make_pair(a,b));
 	s[a].insert(b);
 }
 
 void lachryma(int a,int b)
 {
-	for(int i=-1;i<=1;i++)
+	for(int i=0;i<=1;i++)
 	{
 		lx.emplace_back(a+i);
 		ly.emplace_back(b+i);
@@ -81,13 +90,13 @@ signed main()
 	ly.resize(unique(ly.begin(), ly.end())-ly.begin());
 	n=lx.size()-2;
 	m=ly.size()-2;
-	for(auto [x,y]:chie)
+	for(auto &[x,y]:chie)
 	{
 		x=lower_bound(lx.begin(), lx.end(), x)-lx.begin();
 		y=lower_bound(ly.begin(), ly.end(), y)-ly.begin();
-		arr[{x,y}]=1;
+		arr.insert(make_pair(x,y));
 	}
-	for(auto [a,b,c,d]:qry)
+	for(auto &[a,b,c,d]:qry)
 	{
 		a=lower_bound(lx.begin(), lx.end(), a)-lx.begin();
 		b=lower_bound(ly.begin(), ly.end(), b)-ly.begin();
@@ -97,38 +106,24 @@ signed main()
 		add(c,d);
 	}
 	
-	for(auto sana:arr)
+	for(auto [x,y]:arr)
 	{
-		auto [x,y]=sana.first;
 		for(i=0;i<8;i++)
 		{
 			a=x+dir[i][0];
 			b=y+dir[i][1];
-			if(a>0 && a<=n && b>0 && b<=m && !arr[{a,b}])
+			if(a>=0 && a<=n && b>=0 && b<=m && arr.find(make_pair(a,b))==arr.end())
 				add(a,b);
 		}
 	}
 	
 	for(i=1;i<=n;i++)
 	{
-		if(!arr[{i,1}])
-			add(i,1);
-		if(!arr[{i,m}])
+		if(arr.find(make_pair(i,m))==arr.end())
 			add(i,m);
 	}
-	for(i=1;i<=m;i++)
-	{
-		if(!arr[{1,i}])
-			add(1,i);
-		if(!arr[{n,i}])
-			add(n,i);
-	}
 	
-	for(auto sana:aoi)
-	{
-		aoiaoi.emplace_back(sana.first);
-	}
-	for(auto [x,y]:aoiaoi)
+	for(auto [x,y]:aoi)
 	{
 		if(!iro[{x,y}])
 		{
