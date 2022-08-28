@@ -1,5 +1,5 @@
 @subtask samples 
-example-1.in
+manual example-1.in
 
 @subtask task1
 gen 1 1
