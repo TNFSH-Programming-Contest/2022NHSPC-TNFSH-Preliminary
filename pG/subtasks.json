@@ -10,19 +10,19 @@
         },
         "we1": {
             "index": 1,
-            "score": 15,
+            "score": 17,
             "text": "$w=1$",
             "validators": []
         },        
         "tree": {
             "index": 2,
-            "score": 15,
+            "score": 10,
             "text": "$m = n-1$",
             "validators": []
         },
         "qnlogn": {
             "index": 3,
-            "score": 20,
+            "score": 23,
             "text": "$n \\le 1000$",
             "validators": []
         },        
