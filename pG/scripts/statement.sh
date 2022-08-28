@@ -3,7 +3,7 @@ CONTEST_NAME="$(${PYTHON} "${INTERNALS}/json_extract.py" "${PROBLEM_JSON}" "cont
 PROBLEM_LABEL="$(${PYTHON} "${INTERNALS}/json_extract.py" "${PROBLEM_JSON}" "problem_label")"
 PROBLEM_NAME="$(${PYTHON} "${INTERNALS}/json_extract.py" "${PROBLEM_JSON}" "title")"
 PROBLEM_ID="$(${PYTHON} "${INTERNALS}/json_extract.py" "${PROBLEM_JSON}" "name")"
-"${PYTHON}" "${INTERNALS}/parseSubtask.py" "${BASE_DIR}/subtasks.json" "${BASE_DIR}/subtask-pandoc.json"
+"${PYTHON}" "${INTERNALS}/parse_subtask.py" "${BASE_DIR}/subtasks.json" "${BASE_DIR}/subtask-pandoc.json"
 
 echo "Compiling ${CONTEST_NAME} - ${PROBLEM_LABEL}. ${PROBLEM_NAME} (${PROBLEM_ID})"
 

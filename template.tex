@@ -36,6 +36,7 @@ $endif$
 \usepackage{fontspec}
 \usepackage{fancyhdr}
 \usepackage{longtable,booktabs}
+\usepackage{verbatim}
 \usepackage[left=2cm,right=2cm,top=3cm,bottom=2cm]{geometry}
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
@@ -153,7 +154,9 @@ $endfor$
 \bottomrule
 \end{longtable}}
 
-
+\newcommand{\testfile}[1]{
+\verbatiminput{tests/#1}
+}
 
 \begin{document}
 \Large
