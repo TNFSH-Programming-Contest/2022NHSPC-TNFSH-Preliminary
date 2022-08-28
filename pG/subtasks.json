@@ -10,13 +10,13 @@
         },
         "we1": {
             "index": 1,
-            "score": 10,
+            "score": 15,
             "text": "$w=1$",
             "validators": []
         },        
         "tree": {
             "index": 2,
-            "score": 20,
+            "score": 15,
             "text": "$m = n-1$",
             "validators": []
         },
