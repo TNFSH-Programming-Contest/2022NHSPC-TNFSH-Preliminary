@@ -1,6 +1,5 @@
 {
     "global_validators": [
-        "validator.cpp"
     ],
     "subtasks": {
         "full": {
