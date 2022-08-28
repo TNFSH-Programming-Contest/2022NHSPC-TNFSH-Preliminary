@@ -1,8 +1,8 @@
 {
 	"contest_name": "TODO: 競賽名稱",
-	"problem_label": "TODO: A-G?",
+	"problem_label": "B",
 	"name": "TODO:_English_short_name",
-	"title": "TODO: 題目名稱",
+	"title": "",
 	"memory_limit": 512,
 	"time_limit": 1.0,
 	"type": "Batch",
