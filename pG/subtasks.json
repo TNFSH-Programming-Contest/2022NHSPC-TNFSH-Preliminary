@@ -1,6 +1,5 @@
 {
     "global_validators": [
-        "validator.cpp"
     ],
     "subtasks": {
         "samples": {
@@ -9,9 +8,27 @@
             "text": "範例輸入輸出",
             "validators": []
         },
-        "full": {
+        "we1": {
             "index": 1,
-            "score": 100,
+            "score": 10,
+            "text": "$w=1$",
+            "validators": []
+        },        
+        "tree": {
+            "index": 2,
+            "score": 20,
+            "text": "$m = n-1$",
+            "validators": []
+        },
+        "qnlogn": {
+            "index": 3,
+            "score": 20,
+            "text": "$n \\le 1000$",
+            "validators": []
+        },        
+        "full": {
+            "index": 4,
+            "score": 50,
             "text": "無額外限制",
             "validators": []
         }

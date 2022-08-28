@@ -6,18 +6,15 @@
 \caption{TODO: 圖片說明}
 \end{figure} -->
 
-TODO: 題目敘述
+請輸出 "`hello, world`"
 
 \clearpage
 
 ## 輸入
-TODO: 輸入說明
+本題沒有輸入
 
 ## 輸出
-TODO: 輸出說明
-
-## 輸入限制
- - TODO: 輸入限制
+請輸出 "`hello, world`"
 
 ## 子任務
 \subtasks
@@ -25,11 +22,9 @@ TODO: 輸出說明
 \clearpage
 
 ## 範例輸入
-```
-TODO: 範例輸入
-```
+本題沒有輸入
 
 ## 範例輸出
 ```
-TODO: 範例輸出
+hello, world
 ```

@@ -1,6 +1,6 @@
 {
     "global_validators": [
-        "validator.cpp"
+        
     ],
     "subtasks": {
         "samples": {
@@ -9,9 +9,21 @@
             "text": "範例輸入輸出",
             "validators": []
         },
-        "full": {
+        "neme2": {
             "index": 1,
-            "score": 100,
+            "score": 20,
+            "text": "$n=m=2$",
+            "validators": []
+        },
+        "ne1": {
+            "index": 2,
+            "score": 30,
+            "text": "$n=1$",
+            "validators": []
+        },
+		"all": {
+            "index": 3,
+            "score": 50,
             "text": "無額外限制",
             "validators": []
         }
