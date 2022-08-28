@@ -16,7 +16,7 @@
         },        
         "task2": {
             "index": 2,
-            "score": 20,
+            "score": 10,
             "text": "$2 \\le n,m \\le 10^3$",
             "validators": []
         },
@@ -28,19 +28,19 @@
         },        
         "task4": {
             "index": 4,
-            "score": 50,
+            "score": 20,
             "text": "$2 \\le n,m \\le 10^6$，詢問的點都在邊界上",
             "validators": []
         },        
         "task5": {
             "index": 5,
-            "score": 50,
+            "score": 20,
             "text": "$2 \\le n,m \\le 10^6$",
             "validators": []
         },        
         "task6": {
             "index": 6,
-            "score": 50,
+            "score": 20,
             "text": "無額外限制",
             "validators": []
         }
