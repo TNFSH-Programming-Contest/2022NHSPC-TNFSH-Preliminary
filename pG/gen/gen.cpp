@@ -18,7 +18,7 @@ int mxQ;
 int mxW;
 int isTree;
 
-const int N = 1e5+10;
+const int N = 2e5+10;
 
 int n, m, s, t;
 set<int> G[N]; // to, w
