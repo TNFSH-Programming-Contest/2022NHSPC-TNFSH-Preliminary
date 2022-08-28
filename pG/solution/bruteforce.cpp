@@ -11,20 +11,19 @@
 using namespace std;
 typedef pair<int,int> pii;
 
-const int N = 1e5+10, MOD1 = 1e9+7, MOD2 = 1e8+7;
+const int N = 1e5+10;
 
 int n, m, s, t, q;
 
 vector<int> G[N]; // {eid}
 vector<pii> edg; // weight, to
 
-int dis[N], sto[N];
-void dijks() // s to t
+int dis[N];
+int dijks() // s to t
 {
 	memset(dis, 0x3f, sizeof(dis));
 	priority_queue<pii, vector<pii>, greater<pii>> pq;
 	dis[s] = 0;
-	sto[s] = 1;
 	pq.push({0, s});
 
 	while (!pq.empty())
@@ -41,37 +40,12 @@ void dijks() // s to t
 			int v = edg[e].ss;
 			if (dis[v]>d+w)
 			{
-				sto[v] = sto[u];
 				dis[v] = d+w;
 				pq.push({dis[v], v});
 			}
-			else if (dis[v] == d+w)
-			{
-				sto[v] = (sto[v] + sto[u])%MOD1;
-			}
 		}
 	}
-}
-
-int tot[N];
-int f(int u)
-{
-	if (tot[u] < 0)
-	{
-		if (u == t) tot[u] = 1;
-		else
-		{
-			tot[u] = 0;
-			for (auto e: G[u])
-			{
-				int w = edg[e].ff;
-				int v = edg[e].ss;
-				if (dis[v] != dis[u]+w) continue;
-				tot[u] = (tot[u] + f(v))%MOD1;
-			}
-		}
-	}
-	return tot[u];
+	return dis[t];
 }
 
 signed main()
@@ -88,29 +62,22 @@ signed main()
 		edg.pb({w, u});
 	}
 
-	dijks(); // build s-t dag and sto
-
-	memset(tot, -1, sizeof(tot));
+	int ori = dijks();
 
 	cin >> q;
 	while (q--)
 	{
-		int x, u, v, w;
+		int x, tmp;
 		cin >> x;
-		u = edg[(x-1)*2].ss;
-		v = edg[(x-1)*2+1].ss;
-		w = edg[(x-1)*2].ff;
-		if (dis[u] > dis[v])
-			swap(u, v);
+		tmp = edg[(x-1)*2].ff;
+		edg[(x-1)*2].ff = 1e18;
+		edg[(x-1)*2+1].ff = 1e18;
 
-//		de(u), de(v), de(x), de(sto[u]), de(f(v)), dd
+		if (ori != dijks()) cout << "yes\n";
+		else cout << "no\n";
 
-		if (dis[u] + w != dis[v])
-			cout << "no\n";
-		else if (sto[u]*f(v)%MOD1 == sto[t])
-			cout << "yes\n";
-		else
-			cout << "no\n";
+		edg[(x-1)*2].ff = tmp;
+		edg[(x-1)*2+1].ff = tmp;		
 	}
 }
 // 0, 1, 2, 3, 4, 5
