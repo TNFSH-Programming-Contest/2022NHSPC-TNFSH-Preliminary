@@ -1,5 +1,5 @@
 # 2022NHSPC-TNFSH-Preliminary
- 111學年度資訊學科能力競賽臺南一中校內初選 
+111學年度資訊學科能力競賽臺南一中校內初選
 
 ## Quick Links
 * Actions：[建置測資](../../actions/workflows/build-tests.yml)、[建置題本](../../actions/workflows/build-pdf.yml)、[檢查題目](../../actions/workflows/tps-verify.yml)、[新題目](../../actions/workflows/new-problem.yml)
@@ -15,3 +15,7 @@
 | F | [statement](pF/statement) [md](pF/statement/index.md) [pdf](pF/statement/index.pdf) | [gen](pF/gen) | [validator](pF/validator) | [solution](pF/solution) [check](pF/solutions-check.txt) | [tests](pF/tests) | [problem](pF/problem.json) [solutions](pF/solutions.json) [subtasks](pF/subtasks.json) |
 | G | [statement](pG/statement) [md](pG/statement/index.md) [pdf](pG/statement/index.pdf) | [gen](pG/gen) | [validator](pG/validator) | [solution](pG/solution) [check](pG/solutions-check.txt) | [tests](pG/tests) | [problem](pG/problem.json) [solutions](pG/solutions.json) [subtasks](pG/subtasks.json) |
 <!-- new problem -->
+
+## Subtasks
+<!-- subtasks start -->
+<!-- subtasks end -->
