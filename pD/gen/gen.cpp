@@ -45,7 +45,7 @@ signed main(signed argc, char* argv[]) {
 	tentRatio = atoll(argv[6]);
 
 	n = rnd.wnext(mnN, mxN, 2);
-	m = rnd.wnext(mnN, mxN, 2);
+	m = rnd.wnext(mnM, mxM, 2);
 	has_sol = rnd.next(1,100) <= 80;
 
 	rep(i,1,n) rep(j,1,m) G[i][j] = '.';
