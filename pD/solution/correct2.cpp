@@ -1,12 +1,13 @@
 // By xiplus
 #include <bits/stdc++.h>
 using namespace std;
-#define MAXN 15
-#define EMPTY 0
-#define BANNED 1
-#define WALL 2
-#define TREE 3
-#define TENT 4
+#define MAXN 105
+const int LAND = 1;
+const int WALL = 2;	 // wall or not-connected tree
+const int USED = 4;	 // connected to tent
+const int TREE = 8;
+const int TENT = 16;
+const int BANNED = WALL | USED | TREE | TENT;
 #define endl '\n'
 
 int v[MAXN][MAXN];
@@ -16,7 +17,6 @@ int ccnt[MAXN];
 int cur_r[MAXN];
 int cur_c[MAXN];
 
-char SIGN[] = {'.', '.', 'X', 'T', 'A'};
 bool found = false;
 
 void dfs(int r, int c) {
@@ -43,7 +43,13 @@ void dfs(int r, int c) {
 			found = true;
 			for (int q = 1; q <= n; q++) {
 				for (int w = 1; w <= m; w++) {
-					cout << SIGN[v[q][w]];
+					if (v[q][w] & TREE) {
+						cout << 'T';
+					} else if (v[q][w] & TENT) {
+						cout << 'A';
+					} else {
+						cout << '.';
+					}
 				}
 				cout << endl;
 			}
@@ -52,16 +58,12 @@ void dfs(int r, int c) {
 	}
 
 	// Put
-	if (v[r][c] == EMPTY && cur_r[r] < rcnt[r] && cur_c[c] < ccnt[c]) {
-		v[r][c] = TENT;
+	if (!v[r][c] && cur_r[r] < rcnt[r] && cur_c[c] < ccnt[c]) {
+		v[r][c] |= TENT;
 		cur_r[r]++;
 		cur_c[c]++;
-		if (v[r][c + 1] == EMPTY) {
-			v[r][c + 1] = BANNED;
-		}
-		if (v[r + 1][c] == EMPTY) {
-			v[r + 1][c] = BANNED;
-		}
+		v[r][c + 1] |= USED;
+		v[r + 1][c] |= USED;
 		if (c == m) {
 			if (cur_r[r] == rcnt[r]) {
 				dfs(r + 1, 1);
@@ -69,15 +71,11 @@ void dfs(int r, int c) {
 		} else {
 			dfs(r, c + 1);
 		}
-		v[r][c] = EMPTY;
+		v[r][c] &= ~TENT;
 		cur_r[r]--;
 		cur_c[c]--;
-		if (v[r][c + 1] == BANNED) {
-			v[r][c + 1] = EMPTY;
-		}
-		if (v[r + 1][c] == BANNED) {
-			v[r + 1][c] = EMPTY;
-		}
+		v[r][c + 1] &= ~USED;
+		v[r + 1][c] &= ~USED;
 	}
 	// Not put
 	if (c == m) {
@@ -93,22 +91,22 @@ int main() {
 	cin >> n >> m;
 	for (int q = 1; q <= n; q++) {
 		cin >> rcnt[q];
-		v[q][0] = WALL;
-		v[q][m + 1] = WALL;
+		v[q][0] |= WALL;
+		v[q][m + 1] |= WALL;
 	}
 	for (int q = 1; q <= m; q++) {
 		cin >> ccnt[q];
-		v[0][q] = WALL;
-		v[n + 1][q] = WALL;
+		v[0][q] |= WALL;
+		v[n + 1][q] |= WALL;
 	}
 	char c;
 	for (int q = 1; q <= n; q++) {
 		for (int w = 1; w <= m; w++) {
 			cin >> c;
 			if (c == '.') {
-				v[q][w] = EMPTY;
+				// pass
 			} else if (c == 'T') {
-				v[q][w] = TREE;
+				v[q][w] |= TREE;
 			} else {
 				return 1;
 			}
@@ -116,19 +114,15 @@ int main() {
 	}
 	for (int q = 1; q <= n; q++) {
 		for (int w = 1; w <= m; w++) {
-			if (v[q][w] == EMPTY) {
-				if (v[q - 1][w] != TREE && v[q + 1][w] != TREE && v[q][w - 1] != TREE && v[q][w + 1] != TREE) {
-					v[q][w] = BANNED;
+			if (!v[q][w]) {
+				if (v[q - 1][w] & TREE || v[q + 1][w] & TREE || v[q][w - 1] & TREE || v[q][w + 1] & TREE) {
+					// pass
+				} else {
+					v[q][w] |= WALL;
 				}
 			}
 		}
 	}
-	// for (int q = 0; q <= n + 1; q++) {
-	// 	for (int w = 0; w <= m + 1; w++) {
-	// 		cout << SIGN[v[q][w]];
-	// 	}
-	// 	cout << endl;
-	// }
 
 	dfs(1, 1);
 	if (!found) {
