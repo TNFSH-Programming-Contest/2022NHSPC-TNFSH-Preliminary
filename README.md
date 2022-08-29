@@ -21,8 +21,8 @@
 | | 1 | 2 | 3 | 4 | 5 | 6 |
 | --- | --- | --- | --- | --- | --- | --- |
 | A | 100<br>無額外限制 |
-| B | 30<br>$\forall 1 \leq i \leq 2n, a_i$ 皆為奇數或皆為偶數 | 70<br>無額外限制 |
-| C | 5<br>$1 \leq n \leq 7$ | 15<br>$\forall 1 \leq i \leq n, a_i=i$ | 20<br>$1 \leq n \leq 1000$ | 60<br>無額外限制 |
+| B | 23<br>$\forall 1 \leq i \leq 2n, a_i$ 皆為奇數或皆為偶數 | 77<br>無額外限制 |
+| C | 12<br>$1 \leq n \leq 7$ | 21<br>$\forall 1 \leq i \leq n, a_i=i$ | 21<br>$1 \leq n \leq 1000$ | 46<br>無額外限制 |
 | D | 20<br>$n=m=2$ | 30<br>$n=1$ | 50<br>無額外限制 |
 | E | 100<br>無額外限制 |
 | F | 10<br>$2 \le n,m,q \le 10^2$ | 10<br>$2 \le n,m \le 10^3$ | 20<br>$2 \le n,m \le 10^6, q=1$，詢問在左上和右下 | 20<br>$2 \le n,m \le 10^6$，詢問的點都在邊界上 | 20<br>$2 \le n,m \le 10^6$ | 20<br>無額外限制 |
