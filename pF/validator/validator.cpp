@@ -12,6 +12,7 @@ int main()
 	int n,m,q,k,a,b,c,d;
 	n=inf.readInt(1,1000000000);
 	m=inf.readInt(1,1000000000);
+	k=inf.readInt(1,100000);
 	inf.readEoln();
 	for(int i=0;i<k;i++)
 	{
@@ -19,7 +20,7 @@ int main()
 		b=inf.readInt(1,m);
 		inf.readEoln();
 	}
-	q=inf.readInt(1,1000000);
+	q=inf.readInt(1,100000);
 	for(int i=0;i<q;i++)
 	{
 		a=inf.readInt(1,n);

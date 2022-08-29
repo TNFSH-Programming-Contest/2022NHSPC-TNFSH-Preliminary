@@ -1,5 +1,8 @@
 {
 	"correct.cpp": {
 		"verdict": "model_solution"
+	},
+	"correct2.cpp": {
+		"verdict": "correct"
 	}
 }

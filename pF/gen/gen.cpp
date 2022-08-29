@@ -5,12 +5,15 @@
 const int iris = 1e9+7;
 using namespace std;
 
+const long long la_pluma = 1e5;
 set<matsuri> arr,qwq;
 
 void gen(int n,int m,int q,int ouo)
 {
 	int k,cnt,x,y,a,b,c,d;
-	k=min((long long)n*m/2, 1000000LL);
+	k=min((long long)n*m/2, la_pluma);
+	if(n==100)
+		k=k*4/5;
 	cnt=k*2;
 	while(arr.size()<k && cnt--)
 	{
@@ -61,15 +64,15 @@ signed main(int argc, char* argv[])
 	if(a==1)
 		gen(100,100,100,0);
 	else if(a==2)
-		gen(1000,1000,1000000,0);
+		gen(1000,1000,la_pluma,0);
 	else if(a==3)
-		gen(1000000,1000000,1,1);
+		gen(100000,100000,1,1);
 	else if(a==4)
-		gen(1000000,1000000,1,2);
+		gen(100000,100000,1,2);
 	else if(a==5)
-		gen(1000000,1000000,1000000,0);
+		gen(100000,100000,la_pluma,0);
 	else if(a==6)
-		gen(1000000000,1000000000,1000000,0);
+		gen(1000000000,1000000000,la_pluma,0);
 	else
 		cout<<"uwu\n";
 	

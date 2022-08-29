@@ -1,0 +1,10 @@
+correct.cpp
+solution            compile[OK]
+0-01                sol[OK]    0.015     check[OK]        1  [Correct]             
+full                [1/1 tests]    [Correct]             [100/100 pts]  [match with expected]             0-01
+
+Subtask summary
+100/100 pts
+
+Finished.
+

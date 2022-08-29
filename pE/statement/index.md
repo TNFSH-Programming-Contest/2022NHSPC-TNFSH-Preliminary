@@ -25,11 +25,7 @@ TODO: 輸出說明
 \clearpage
 
 ## 範例輸入
-```
-TODO: 範例輸入
-```
+\testfile{0-01.in}
 
 ## 範例輸出
-```
-TODO: 範例輸出
-```
+\testfile{0-01.out}

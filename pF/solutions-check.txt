@@ -1,0 +1,40 @@
+AC.cpp
+solution            compile[WARN]
+0-01                sol[OK]    0.017     check[OK]        1  [Correct]             
+1-01                sol[OK]    0.032     check[OK]        1  [Correct]             
+1-02                sol[OK]    0.034     check[OK]        1  [Correct]             
+1-03                sol[OK]    0.032     check[OK]        1  [Correct]             
+1-04                sol[OK]    0.032     check[OK]        1  [Correct]             
+2-01                sol[FAIL]  2.022     check[SKIP]      0  [Time Limit Exceeded] 
+2-02                sol[FAIL]  2.138     check[SKIP]      0  [Time Limit Exceeded] 
+2-03                sol[FAIL]  2.120     check[SKIP]      0  [Time Limit Exceeded] 
+2-04                sol[FAIL]  2.073     check[SKIP]      0  [Time Limit Exceeded] 
+3-01                sol[FAIL]  2.809     check[SKIP]      0  [Time Limit Exceeded] 
+3-02                sol[FAIL]  2.902     check[SKIP]      0  [Time Limit Exceeded] 
+3-03                sol[FAIL]  2.935     check[SKIP]      0  [Time Limit Exceeded] 
+3-04                sol[FAIL]  2.910     check[SKIP]      0  [Time Limit Exceeded] 
+4-01                sol[FAIL]  2.876     check[SKIP]      0  [Time Limit Exceeded] 
+4-02                sol[FAIL]  2.851     check[SKIP]      0  [Time Limit Exceeded] 
+4-03                sol[FAIL]  2.886     check[SKIP]      0  [Time Limit Exceeded] 
+4-04                sol[FAIL]  2.795     check[SKIP]      0  [Time Limit Exceeded] 
+5-01                sol[FAIL]  3.009     check[SKIP]      0  [Time Limit Exceeded] 
+5-02                sol[FAIL]  3.009     check[SKIP]      0  [Time Limit Exceeded] 
+5-03                sol[FAIL]  3.011     check[SKIP]      0  [Time Limit Exceeded] 
+5-04                sol[FAIL]  3.008     check[SKIP]      0  [Time Limit Exceeded] 
+6-01                sol[FAIL]  3.009     check[SKIP]      0  [Time Limit Exceeded] 
+6-02                sol[FAIL]  3.009     check[SKIP]      0  [Time Limit Exceeded] 
+6-03                sol[FAIL]  3.009     check[SKIP]      0  [Time Limit Exceeded] 
+6-04                sol[FAIL]  3.010     check[SKIP]      0  [Time Limit Exceeded] 
+samples             [1/1 tests]    [Correct]             [0/0 pts]      [match with expected]             0-01
+task1               [4/4 tests]    [Correct]             [10/10 pts]    [match with expected]             1-01
+task2               [4/4 tests]    [Time Limit Exceeded] [0/10 pts]     [expected: model_solution]        2-01
+task3               [4/4 tests]    [Time Limit Exceeded] [0/20 pts]     [expected: model_solution]        3-01
+task4               [4/4 tests]    [Time Limit Exceeded] [0/20 pts]     [expected: model_solution]        4-01
+task5               [4/4 tests]    [Time Limit Exceeded] [0/20 pts]     [expected: model_solution]        5-01
+task6               [4/4 tests]    [Time Limit Exceeded] [0/20 pts]     [expected: model_solution]        6-01
+
+Subtask summary
+10/100 pts
+
+Finished.
+

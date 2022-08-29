@@ -13,7 +13,7 @@
         },
         "task1": {
             "index": 1,
-            "score": 5,
+            "score": 12,
             "text": "$1 \\leq n \\leq 7$",
             "validators": [
                 "task1_val.cpp"
@@ -21,7 +21,7 @@
         },
         "task2": {
             "index": 2,
-            "score": 15,
+            "score": 21,
             "text": "$\\forall 1 \\leq i \\leq n, a_i=i$",
             "validators": [
                 "task2_val.cpp"
@@ -29,7 +29,7 @@
         },
         "task3": {
             "index": 3,
-            "score": 20,
+            "score": 21,
             "text": "$1 \\leq n \\leq 1000$",
             "validators": [
                 "task3_val.cpp"
@@ -37,7 +37,7 @@
         },
         "task4": {
             "index": 4,
-            "score": 60,
+            "score": 46,
             "text": "無額外限制",
             "validators": [
                 "task4_val.cpp"

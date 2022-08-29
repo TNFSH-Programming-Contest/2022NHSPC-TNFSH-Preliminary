@@ -358,12 +358,13 @@ def verify_subtasks():
 
     subtasks = subtasks_data['subtasks']
     hasSamples = False
-    try:
-        if Verification.problem['type'] != 'OutputOnly':
-            check_keys(subtasks, ['samples'])
-            hasSamples = True
-    except KeyError:
-        pass
+    # No samples for pA
+    # try:
+    #     if Verification.problem['type'] != 'OutputOnly':
+    #         check_keys(subtasks, ['samples'])
+    #         hasSamples = True
+    # except KeyError:
+    #     pass
 
     indexes = set()
     score_sum = 0
