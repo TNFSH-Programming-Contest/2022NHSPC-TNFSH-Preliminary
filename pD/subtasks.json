@@ -21,16 +21,10 @@
             "text": "$n=1$",
             "validators": []
         },
-		"all": {
+        "all": {
             "index": 3,
             "score": 50,
             "text": "無額外限制",
-            "validators": []
-        },
-		"large": {
-            "index": 4,
-            "score": 0,
-            "text": "大筆測資",
             "validators": []
         }
     }
