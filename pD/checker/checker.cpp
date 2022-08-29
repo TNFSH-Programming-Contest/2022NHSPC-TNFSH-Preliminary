@@ -84,12 +84,12 @@ int main(int argc, char* argv[]) {
 	}
 	for (int q = 0; q < n; q++) {
 		if (rcnt[q] != prcnt[q]) {
-			quitf(_wa, "Count of tents on row %s incorrect.", q + 1);
+			quitf(_wa, "Count of tents on row %d incorrect.", q + 1);
 		}
 	}
 	for (int q = 0; q < m; q++) {
 		if (ccnt[q] != pccnt[q]) {
-			quitf(_wa, "Count of tents on col %s incorrect.", q + 1);
+			quitf(_wa, "Count of tents on col %d incorrect.", q + 1);
 		}
 	}
 
