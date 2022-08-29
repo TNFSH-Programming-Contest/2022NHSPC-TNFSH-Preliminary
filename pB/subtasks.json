@@ -13,7 +13,7 @@
         },
         "task1": {
             "index": 1,
-            "score": 30,
+            "score": 23,
             "text": "$\\forall 1 \\leq i \\leq 2n, a_i$ 皆為奇數或皆為偶數",
             "validators": [
                 "task1_val.cpp"
@@ -21,7 +21,7 @@
         },
         "task2": {
             "index": 2,
-            "score": 70,
+            "score": 77,
             "text": "無額外限制",
             "validators": [
                 "task2_val.cpp"
