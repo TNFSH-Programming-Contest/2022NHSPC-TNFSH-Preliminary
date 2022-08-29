@@ -1,6 +1,6 @@
 {
     "global_validators": [
-        
+        "validator.cpp"
     ],
     "subtasks": {
         "samples": {
@@ -25,6 +25,12 @@
             "index": 3,
             "score": 50,
             "text": "無額外限制",
+            "validators": []
+        },
+		"large": {
+            "index": 4,
+            "score": 0,
+            "text": "大筆測資",
             "validators": []
         }
     }
