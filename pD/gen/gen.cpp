@@ -55,15 +55,17 @@ signed main(signed argc, char* argv[]) {
 			if (rnd.next(1,100) <= treeRatio)
 				G[i][j] = 'T';
 
-	rep(i,1,n)
-		rep(j,1,m)
-			if (can(i,j) && rnd.next(1, 100) <= tentRatio)
-				G[i][j] = 'A', rreq[i]++, creq[j]++;
-
 	if (!has_sol)
 	{
 		rep(i,1,n) rreq[i] = rnd.wnext(1, m, 3);
 		rep(i,1,m) creq[i] = rnd.wnext(1, n, 3);
+	}
+	else
+	{
+        rep(i,1,n)
+            rep(j,1,m)
+                if (can(i,j) && rnd.next(1, 100) <= tentRatio)
+                    G[i][j] = 'A', rreq[i]++, creq[j]++;
 	}
 	
 	cout << n << ' ' << m << '\n';
