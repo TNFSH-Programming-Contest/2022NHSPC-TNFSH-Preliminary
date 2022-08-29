@@ -9,8 +9,10 @@ on:
   workflow_dispatch:
 
 jobs:
-  create:
+  list:
+    if: ${{ github.repository != 'TNFSH-Programming-Contest/tps-starter' }}
     runs-on: ubuntu-latest
+    timeout-minutes: 3
 
     steps:
       - uses: actions/checkout@v3
