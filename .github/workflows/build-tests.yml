@@ -1,15 +1,15 @@
 name: Build tests
 
 on:
-  push:
-    branches:
-      - '**'
-    paths:
-      - '*/gen/**'
-      - '*/solution/**'
-      - '*/problem.json'
-      - '*/solutions.json'
-      - '*/subtasks.json'
+  # push:
+  #   branches:
+  #     - '**'
+  #   paths:
+  #     - '*/gen/**'
+  #     - '*/solution/**'
+  #     - '*/problem.json'
+  #     - '*/solutions.json'
+  #     - '*/subtasks.json'
   workflow_dispatch:
     inputs:
       input:

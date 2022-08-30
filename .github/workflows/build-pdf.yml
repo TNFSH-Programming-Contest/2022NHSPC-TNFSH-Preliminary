@@ -1,18 +1,18 @@
 name: Build pdf
 
 on:
-  push:
-    branches:
-      - '**'
-    paths:
-      - '*/scripts/statement.sh'
-      - '*/statement/*.jpg'
-      - '*/statement/DISABLE_AUTO_BUILD'
-      - '*/statement/index.md'
-      - '*/problem.json'
-      - '*/subtasks.json'
-      - 'template.tex'
-      - 'cover.tex'
+  # push:
+  #   branches:
+  #     - '**'
+  #   paths:
+  #     - '*/scripts/statement.sh'
+  #     - '*/statement/*.jpg'
+  #     - '*/statement/DISABLE_AUTO_BUILD'
+  #     - '*/statement/index.md'
+  #     - '*/problem.json'
+  #     - '*/subtasks.json'
+  #     - 'template.tex'
+  #     - 'cover.tex'
   workflow_dispatch:
     inputs:
       target:

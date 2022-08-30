@@ -1,11 +1,11 @@
 name: List subtasks
 
 on:
-  push:
-    branches:
-      - '**'
-    paths:
-      - '*/subtasks.json'
+  # push:
+  #   branches:
+  #     - '**'
+  #   paths:
+  #     - '*/subtasks.json'
   workflow_dispatch:
 
 jobs:

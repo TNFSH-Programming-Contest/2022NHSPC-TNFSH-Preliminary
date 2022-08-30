@@ -1,11 +1,11 @@
 name: TPS verify
 
 on:
-  push:
-    branches:
-      - '**'
-    paths:
-      - 'p*/**'
+  # push:
+  #   branches:
+  #     - '**'
+  #   paths:
+  #     - 'p*/**'
   workflow_dispatch:
     inputs:
       target:
