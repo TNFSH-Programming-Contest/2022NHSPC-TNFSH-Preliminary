@@ -1,18 +1,18 @@
 name: Build pdf
 
 on:
-  # push:
-  #   branches:
-  #     - '**'
-  #   paths:
-  #     - '*/scripts/statement.sh'
-  #     - '*/statement/*.jpg'
-  #     - '*/statement/DISABLE_AUTO_BUILD'
-  #     - '*/statement/index.md'
-  #     - '*/problem.json'
-  #     - '*/subtasks.json'
-  #     - 'template.tex'
-  #     - 'cover.tex'
+  push:
+    branches:
+      - '**'
+    paths:
+      - '*/scripts/statement.sh'
+      - '*/statement/*.jpg'
+      - '*/statement/DISABLE_AUTO_BUILD'
+      - '*/statement/index.md'
+      - '*/problem.json'
+      - '*/subtasks.json'
+      - 'template.tex'
+      - 'cover.tex'
   workflow_dispatch:
     inputs:
       target:
@@ -21,7 +21,7 @@ on:
 
 jobs:
   problem-list:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 3
     outputs:
       matrix: ${{ steps.problem-list.outputs.matrix }}
@@ -37,7 +37,7 @@ jobs:
   check-push:
     needs: [problem-list]
     if: ${{ github.event_name == 'push' && github.repository != 'TNFSH-Programming-Contest/tps-starter' }}
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 3
     strategy:
       matrix:
@@ -104,7 +104,7 @@ jobs:
   check-manually:
     needs: [problem-list]
     if: github.event_name == 'workflow_dispatch'
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 3
     strategy:
       matrix:
@@ -130,7 +130,7 @@ jobs:
   check-post:
     needs: [check-push, check-manually]
     if: ${{ always() && github.repository != 'TNFSH-Programming-Contest/tps-starter' }}
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 3
     outputs:
       problems: ${{ steps.check-post.outputs.problems }}
@@ -158,7 +158,7 @@ jobs:
   build-pdf:
     needs: check-post
     if: always() && needs.check-post.outputs.problems != ''
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 5
 
     steps:

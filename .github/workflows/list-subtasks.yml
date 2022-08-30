@@ -1,17 +1,17 @@
 name: List subtasks
 
 on:
-  # push:
-  #   branches:
-  #     - '**'
-  #   paths:
-  #     - '*/subtasks.json'
+  push:
+    branches:
+      - '**'
+    paths:
+      - '*/subtasks.json'
   workflow_dispatch:
 
 jobs:
   list:
     if: ${{ github.repository != 'TNFSH-Programming-Contest/tps-starter' }}
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 3
 
     steps:
