@@ -4,5 +4,8 @@
 	},
 	"correct2.cpp": {
 		"verdict": "correct"
+	},
+	"hill_climbing.cpp": {
+		"verdict": "correct"
 	}
 }
