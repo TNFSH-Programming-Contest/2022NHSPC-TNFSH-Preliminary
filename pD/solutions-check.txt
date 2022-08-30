@@ -1,33 +1,33 @@
 correct.cpp
 solution            compile[WARN]
-checker             compile[WARN]
-0-01                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-0-02                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-1-01                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-1-02                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-1-03                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-1-04                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-1-05                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-2-01                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-2-02                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-2-03                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-2-04                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-2-05                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-3-01                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-3-02                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-3-03                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-3-04                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-3-05                sol[OK]    0.012     check[OK]        1  [Correct]               The answer is correct.
-3-06                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-3-07                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-3-08                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-3-09                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-3-10                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-3-11                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-3-12                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-3-13                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-3-14                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-3-15                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
+checker             compile[OK]
+0-01                sol[OK]    0.017     check[OK]        1  [Correct]               The answer is correct.
+0-02                sol[OK]    0.015     check[OK]        1  [Correct]               The answer is correct.
+1-01                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
+1-02                sol[OK]    0.017     check[OK]        1  [Correct]               The answer is correct.
+1-03                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
+1-04                sol[OK]    0.018     check[OK]        1  [Correct]               The answer is correct.
+1-05                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
+2-01                sol[OK]    0.020     check[OK]        1  [Correct]               The answer is correct.
+2-02                sol[OK]    0.020     check[OK]        1  [Correct]               The answer is correct.
+2-03                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
+2-04                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
+2-05                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
+3-01                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
+3-02                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
+3-03                sol[OK]    0.017     check[OK]        1  [Correct]               The answer is correct.
+3-04                sol[OK]    0.015     check[OK]        1  [Correct]               The answer is correct.
+3-05                sol[OK]    0.015     check[OK]        1  [Correct]               The answer is correct.
+3-06                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
+3-07                sol[OK]    0.017     check[OK]        1  [Correct]               The answer is correct.
+3-08                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
+3-09                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
+3-10                sol[OK]    0.017     check[OK]        1  [Correct]               The answer is correct.
+3-11                sol[OK]    0.015     check[OK]        1  [Correct]               The answer is correct.
+3-12                sol[OK]    0.015     check[OK]        1  [Correct]               The answer is correct.
+3-13                sol[OK]    0.017     check[OK]        1  [Correct]               The answer is correct.
+3-14                sol[OK]    0.015     check[OK]        1  [Correct]               The answer is correct.
+3-15                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
 samples             [2/2 tests]    [Correct]             [0/0 pts]      [match with expected]             0-01
 neme2               [5/5 tests]    [Correct]             [20/20 pts]    [match with expected]             1-01
 ne1                 [5/5 tests]    [Correct]             [30/30 pts]    [match with expected]             2-01
@@ -40,34 +40,74 @@ Finished.
 
 correct2.cpp
 solution            compile[OK]
-checker             compile[WARN]
-0-01                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-0-02                sol[OK]    0.014     check[OK]        1  [Correct]               The answer is correct.
-1-01                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-1-02                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-1-03                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-1-04                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-1-05                sol[OK]    0.014     check[OK]        1  [Correct]               The answer is correct.
-2-01                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-2-02                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-2-03                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-2-04                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-2-05                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-3-01                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-3-02                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-3-03                sol[OK]    0.014     check[OK]        1  [Correct]               The answer is correct.
-3-04                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-3-05                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-3-06                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-3-07                sol[OK]    0.014     check[OK]        1  [Correct]               The answer is correct.
-3-08                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-3-09                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-3-10                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-3-11                sol[OK]    0.014     check[OK]        1  [Correct]               The answer is correct.
-3-12                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-3-13                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-3-14                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
-3-15                sol[OK]    0.013     check[OK]        1  [Correct]               The answer is correct.
+checker             compile[OK]
+0-01                sol[OK]    0.015     check[OK]        1  [Correct]               The answer is correct.
+0-02                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
+1-01                sol[OK]    0.015     check[OK]        1  [Correct]               The answer is correct.
+1-02                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
+1-03                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
+1-04                sol[OK]    0.017     check[OK]        1  [Correct]               The answer is correct.
+1-05                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
+2-01                sol[OK]    0.015     check[OK]        1  [Correct]               The answer is correct.
+2-02                sol[OK]    0.017     check[OK]        1  [Correct]               The answer is correct.
+2-03                sol[OK]    0.017     check[OK]        1  [Correct]               The answer is correct.
+2-04                sol[OK]    0.015     check[OK]        1  [Correct]               The answer is correct.
+2-05                sol[OK]    0.017     check[OK]        1  [Correct]               The answer is correct.
+3-01                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
+3-02                sol[OK]    0.020     check[OK]        1  [Correct]               The answer is correct.
+3-03                sol[OK]    0.015     check[OK]        1  [Correct]               The answer is correct.
+3-04                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
+3-05                sol[OK]    0.015     check[OK]        1  [Correct]               The answer is correct.
+3-06                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
+3-07                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
+3-08                sol[OK]    0.017     check[OK]        1  [Correct]               The answer is correct.
+3-09                sol[OK]    0.019     check[OK]        1  [Correct]               The answer is correct.
+3-10                sol[OK]    0.015     check[OK]        1  [Correct]               The answer is correct.
+3-11                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
+3-12                sol[OK]    0.017     check[OK]        1  [Correct]               The answer is correct.
+3-13                sol[OK]    0.018     check[OK]        1  [Correct]               The answer is correct.
+3-14                sol[OK]    0.020     check[OK]        1  [Correct]               The answer is correct.
+3-15                sol[OK]    0.019     check[OK]        1  [Correct]               The answer is correct.
+samples             [2/2 tests]    [Correct]             [0/0 pts]      [match with expected]             0-01
+neme2               [5/5 tests]    [Correct]             [20/20 pts]    [match with expected]             1-01
+ne1                 [5/5 tests]    [Correct]             [30/30 pts]    [match with expected]             2-01
+all                 [27/27 tests]  [Correct]             [50/50 pts]    [match with expected]             0-01
+
+Subtask summary
+100/100 pts
+
+Finished.
+
+hill_climbing.cpp
+solution            compile[OK]
+checker             compile[OK]
+0-01                sol[OK]    0.017     check[OK]        1  [Correct]               The answer is correct.
+0-02                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
+1-01                sol[OK]    0.017     check[OK]        1  [Correct]               The answer is correct.
+1-02                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
+1-03                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
+1-04                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
+1-05                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
+2-01                sol[OK]    0.019     check[OK]        1  [Correct]               The answer is correct.
+2-02                sol[OK]    0.014     check[OK]        1  [Correct]               The answer is correct.
+2-03                sol[OK]    0.017     check[OK]        1  [Correct]               The answer is correct.
+2-04                sol[OK]    0.017     check[OK]        1  [Correct]               The answer is correct.
+2-05                sol[OK]    0.015     check[OK]        1  [Correct]               The answer is correct.
+3-01                sol[OK]    0.017     check[OK]        1  [Correct]               The answer is correct.
+3-02                sol[OK]    0.018     check[OK]        1  [Correct]               The answer is correct.
+3-03                sol[OK]    0.015     check[OK]        1  [Correct]               The answer is correct.
+3-04                sol[OK]    0.015     check[OK]        1  [Correct]               The answer is correct.
+3-05                sol[OK]    0.017     check[OK]        1  [Correct]               The answer is correct.
+3-06                sol[OK]    0.015     check[OK]        1  [Correct]               The answer is correct.
+3-07                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
+3-08                sol[OK]    0.015     check[OK]        1  [Correct]               The answer is correct.
+3-09                sol[OK]    0.014     check[OK]        1  [Correct]               The answer is correct.
+3-10                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
+3-11                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
+3-12                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
+3-13                sol[OK]    0.015     check[OK]        1  [Correct]               The answer is correct.
+3-14                sol[OK]    0.015     check[OK]        1  [Correct]               The answer is correct.
+3-15                sol[OK]    0.016     check[OK]        1  [Correct]               The answer is correct.
 samples             [2/2 tests]    [Correct]             [0/0 pts]      [match with expected]             0-01
 neme2               [5/5 tests]    [Correct]             [20/20 pts]    [match with expected]             1-01
 ne1                 [5/5 tests]    [Correct]             [30/30 pts]    [match with expected]             2-01
