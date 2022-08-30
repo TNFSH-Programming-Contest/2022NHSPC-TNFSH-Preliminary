@@ -50,8 +50,8 @@ jobs:
 
       - name: Make flags dir
         run: |
-          mkdir -p /home/runner/flags/
-          touch /home/runner/flags/.keep
+          mkdir -p $RUNNER_TEMP/flags/
+          touch $RUNNER_TEMP/flags/.keep
 
       - uses: dorny/paths-filter@v2
         id: changes
@@ -70,7 +70,7 @@ jobs:
       - name: Set problem flag
         if: steps.changes.outputs.pdf == 'true' || (matrix.problem == 'A' && steps.changes.outputs.cover == 'true')
         run: |
-          echo "${{ matrix.problem }}" > /home/runner/flags/${{ matrix.problem }}
+          echo "${{ matrix.problem }}" > $RUNNER_TEMP/flags/${{ matrix.problem }}
 
       - name: Check changes in config
         run: |
@@ -78,14 +78,14 @@ jobs:
 
           git diff ${{ github.event.before }}..HEAD -U0 p${{ matrix.problem }}/problem.json | grep '"contest_name"\|"problem_label"\|"name"\|"title"\|"memory_limit"\|"time_limit"'
           if [ $? -eq 0 ]; then
-            echo "${{ matrix.problem }}" > /home/runner/flags/${{ matrix.problem }}
+            echo "${{ matrix.problem }}" > $RUNNER_TEMP/flags/${{ matrix.problem }}
           else
             echo "No changes in problem.json for pdf";
           fi
 
           git diff ${{ github.event.before }}..HEAD -U0 p${{ matrix.problem }}/subtasks.json | grep '"index"\|"score"\|"text"'
           if [ $? -eq 0 ]; then
-            echo "${{ matrix.problem }}" > /home/runner/flags/${{ matrix.problem }}
+            echo "${{ matrix.problem }}" > $RUNNER_TEMP/flags/${{ matrix.problem }}
           else
             echo "No changes in subtasks.json for pdf";
           fi
@@ -93,13 +93,13 @@ jobs:
       - name: Remove flags if auto build disabled
         if: hashFiles(format('p{0}/statement/DISABLE_AUTO_BUILD', matrix.problem)) != ''
         run: |
-          rm -f /home/runner/flags/${{ matrix.problem }}
+          rm -f $RUNNER_TEMP/flags/${{ matrix.problem }}
 
       - name: Upload flags
         uses: actions/upload-artifact@v2
         with:
           name: flags
-          path: /home/runner/flags/
+          path: ${{ runner.temp }}/flags/
 
   check-manually:
     needs: [problem-list]
@@ -113,19 +113,19 @@ jobs:
     steps:
       - name: Make flags dir
         run: |
-          mkdir -p /home/runner/flags/
-          touch /home/runner/flags/.keep
+          mkdir -p $RUNNER_TEMP/flags/
+          touch $RUNNER_TEMP/flags/.keep
 
       - name: Set problem flag
         if: contains(github.event.inputs.target, matrix.problem)
         run: |
-          echo "${{ matrix.problem }}" > /home/runner/flags/${{ matrix.problem }}
+          echo "${{ matrix.problem }}" > $RUNNER_TEMP/flags/${{ matrix.problem }}
 
       - name: Upload flags
         uses: actions/upload-artifact@v2
         with:
           name: flags
-          path: /home/runner/flags/
+          path: ${{ runner.temp }}/flags/
 
   check-post:
     needs: [check-push, check-manually]
@@ -140,16 +140,16 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: flags
-          path: /home/runner/flags/
+          path: ${{ runner.temp }}/flags/
 
       - name: Set merge flag
         if: ${{ github.event_name == 'workflow_dispatch' && contains(github.event.inputs.target, '+') }}
         run: |
-          echo "+" > /home/runner/flags/+
+          echo "+" > $RUNNER_TEMP/flags/+
 
       - name: Check target
         id: check-post
-        working-directory: /home/runner/flags/
+        working-directory: ${{ runner.temp }}/flags/
         run: |
           probs=$(ls -m .)
           echo $probs
@@ -168,24 +168,18 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: flags
-          path: /home/runner/flags/
+          path: ${{ runner.temp }}/flags/
 
-      - name: Install tps
+      - name: Install dependencies
+        if: ${{ runner.name == 'Hosted Agent' || startsWith(runner.name, 'GitHub Actions') }}
         run: |
-          git clone https://github.com/ioi-2017/tps.git
-          cd tps && sudo ./install-tps.sh
+          bash -c "$(curl -fsSL https://raw.githubusercontent.com/ioi-2017/tps/master/online-installer/install.sh)"
 
-      - name: Install pandoc
-        run: |
           wget https://github.com/jgm/pandoc/releases/download/2.10.1/pandoc-2.10.1-1-amd64.deb
           sudo dpkg -i pandoc-2.10.1-1-amd64.deb
 
-      - name: Install xetex
-        run: |
           sudo apt-get install texlive-xetex
 
-      - name: Install fonts
-        run: |
           sudo mkdir -p /usr/share/fonts/opentype/noto
           wget -nv https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJK-Regular.ttc.zip
           unzip NotoSansCJK-Regular.ttc.zip -d NotoSansCJK-Regular
@@ -198,8 +192,6 @@ jobs:
           ls -al /usr/share/fonts/opentype/noto
           sudo fc-cache -f -v
 
-      - name: Install pdfunite
-        run: |
           sudo apt-get install poppler-utils
 
       - name: Check environment
@@ -224,7 +216,7 @@ jobs:
 
       - name: Build pdf
         run: |
-          for prob in $(cat /home/runner/flags/*); do
+          for prob in $(cat $RUNNER_TEMP/flags/*); do
             cd p${prob} && tps statement && cd ..
           done
 
@@ -251,7 +243,7 @@ jobs:
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git status
-          for prob in $(cat /home/runner/flags/*); do
+          for prob in $(cat $RUNNER_TEMP/flags/*); do
             git add p${prob}/statement/index.pdf
           done
           git pull

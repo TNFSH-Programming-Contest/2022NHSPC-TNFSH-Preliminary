@@ -15,12 +15,11 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Install dependencies
+        if: ${{ runner.name == 'Hosted Agent' || startsWith(runner.name, 'GitHub Actions') }}
         run: |
           sudo apt-get install dos2unix python3-setuptools
           sudo python3 -m pip install psutil
 
-      - name: Install tps
-        run: |
           bash -c "$(curl -fsSL https://raw.githubusercontent.com/ioi-2017/tps/master/online-installer/install.sh)"
 
       - name: Download templates
@@ -30,7 +29,7 @@ jobs:
           path: 'tps-task-templates'
 
       - name: New problem
-        shell: python
+        shell: python3 {0}
         run: |
           import json
           import os

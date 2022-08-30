@@ -20,13 +20,13 @@ jobs:
     outputs:
       matrix: ${{ steps.problem-list.outputs.matrix }}
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - name: Read problems
-      id: problem-list
-      run: |
-        problems=$(cat .problems.json)
-        echo "::set-output name=matrix::$problems"
+      - name: Read problems
+        id: problem-list
+        run: |
+          problems=$(cat .problems.json)
+          echo "::set-output name=matrix::$problems"
 
   verify:
     needs: [problem-list]
@@ -41,14 +41,12 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Install dependencies
+        if: ${{ runner.name == 'Hosted Agent' || startsWith(runner.name, 'GitHub Actions') }}
         run: |
           sudo apt-get install dos2unix python3-setuptools
           sudo python3 -m pip install psutil
 
-      - name: Install tps
-        run: |
-          git clone https://github.com/ioi-2017/tps.git
-          cd tps && sudo ./install-tps.sh
+          bash -c "$(curl -fsSL https://raw.githubusercontent.com/ioi-2017/tps/master/online-installer/install.sh)"
 
       - uses: dorny/paths-filter@v2
         id: changes

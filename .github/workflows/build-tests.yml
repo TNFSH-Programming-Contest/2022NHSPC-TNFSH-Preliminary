@@ -53,14 +53,14 @@ jobs:
 
       - name: Make flags dir
         run: |
-          mkdir -p /home/runner/flags/build-tests/
-          touch /home/runner/flags/build-tests/.keep
-          mkdir -p /home/runner/flags/build-input/
-          touch /home/runner/flags/build-input/.keep
-          mkdir -p /home/runner/flags/build-output/
-          touch /home/runner/flags/build-output/.keep
-          mkdir -p /home/runner/flags/run-solutions/
-          touch /home/runner/flags/run-solutions/.keep
+          mkdir -p $RUNNER_TEMP/flags/build-tests/
+          touch $RUNNER_TEMP/flags/build-tests/.keep
+          mkdir -p $RUNNER_TEMP/flags/build-input/
+          touch $RUNNER_TEMP/flags/build-input/.keep
+          mkdir -p $RUNNER_TEMP/flags/build-output/
+          touch $RUNNER_TEMP/flags/build-output/.keep
+          mkdir -p $RUNNER_TEMP/flags/run-solutions/
+          touch $RUNNER_TEMP/flags/run-solutions/.keep
 
       - name: Set env
         id: env
@@ -91,20 +91,20 @@ jobs:
       - name: Set input flag
         if: steps.changes.outputs.input == 'true'
         run: |
-          echo true > /home/runner/flags/build-tests/${{ matrix.problem }}
-          echo true > /home/runner/flags/build-input/${{ matrix.problem }}
+          echo true > $RUNNER_TEMP/flags/build-tests/${{ matrix.problem }}
+          echo true > $RUNNER_TEMP/flags/build-input/${{ matrix.problem }}
 
       - name: Set output flag
         if: steps.changes.outputs.output == 'true'
         run: |
-          echo true > /home/runner/flags/build-tests/${{ matrix.problem }}
-          echo true > /home/runner/flags/build-output/${{ matrix.problem }}
+          echo true > $RUNNER_TEMP/flags/build-tests/${{ matrix.problem }}
+          echo true > $RUNNER_TEMP/flags/build-output/${{ matrix.problem }}
 
       - name: Set solutions flag
         if: steps.changes.outputs.solutions == 'true'
         run: |
-          echo true > /home/runner/flags/build-tests/${{ matrix.problem }}
-          echo true > /home/runner/flags/run-solutions/${{ matrix.problem }}
+          echo true > $RUNNER_TEMP/flags/build-tests/${{ matrix.problem }}
+          echo true > $RUNNER_TEMP/flags/run-solutions/${{ matrix.problem }}
 
       - name: Check changes in config
         run: |
@@ -112,24 +112,24 @@ jobs:
 
           git diff ${{ github.event.before }}..HEAD -U0 p${{ matrix.problem }}/problem.json | grep '"time_limit"'
           if [ $? -eq 0 ]; then
-            echo true > /home/runner/flags/build-tests/${{ matrix.problem }}
-            echo true > /home/runner/flags/run-solutions/${{ matrix.problem }}
+            echo true > $RUNNER_TEMP/flags/build-tests/${{ matrix.problem }}
+            echo true > $RUNNER_TEMP/flags/run-solutions/${{ matrix.problem }}
           else
             echo "No changes in problem.json for solutions";
           fi
 
           git diff ${{ github.event.before }}..HEAD -U0 p${{ matrix.problem }}/solutions.json | grep '"model_solution"'
           if [ $? -eq 0 ]; then
-            echo true > /home/runner/flags/build-tests/${{ matrix.problem }}
-            echo true > /home/runner/flags/build-input/${{ matrix.problem }}
+            echo true > $RUNNER_TEMP/flags/build-tests/${{ matrix.problem }}
+            echo true > $RUNNER_TEMP/flags/build-input/${{ matrix.problem }}
           else
             echo "No changes in solutions.json for input";
           fi
 
           git diff ${{ github.event.before }}..HEAD -U0 p${{ matrix.problem }}/subtasks.json | grep '"score"'
           if [ $? -eq 0 ]; then
-            echo true > /home/runner/flags/build-tests/${{ matrix.problem }}
-            echo true > /home/runner/flags/run-solutions/${{ matrix.problem }}
+            echo true > $RUNNER_TEMP/flags/build-tests/${{ matrix.problem }}
+            echo true > $RUNNER_TEMP/flags/run-solutions/${{ matrix.problem }}
           else
             echo "No changes in subtasks.json for solutions";
           fi
@@ -137,16 +137,16 @@ jobs:
       - name: Remove flags if auto build disabled
         if: hashFiles(format('p{0}/gen/DISABLE_AUTO_BUILD', matrix.problem)) != ''
         run: |
-          rm -f /home/runner/flags/build-tests/${{ matrix.problem }}
-          rm -f /home/runner/flags/build-input/${{ matrix.problem }}
-          rm -f /home/runner/flags/build-output/${{ matrix.problem }}
-          rm -f /home/runner/flags/run-solutions/${{ matrix.problem }}
+          rm -f $RUNNER_TEMP/flags/build-tests/${{ matrix.problem }}
+          rm -f $RUNNER_TEMP/flags/build-input/${{ matrix.problem }}
+          rm -f $RUNNER_TEMP/flags/build-output/${{ matrix.problem }}
+          rm -f $RUNNER_TEMP/flags/run-solutions/${{ matrix.problem }}
 
       - name: Upload flags
         uses: actions/upload-artifact@v2
         with:
           name: flags
-          path: /home/runner/flags/
+          path: ${{ runner.temp }}/flags/
 
   check-manually:
     needs: [problem-list]
@@ -160,38 +160,38 @@ jobs:
     steps:
       - name: Make flags dir
         run: |
-          mkdir -p /home/runner/flags/build-tests/
-          touch /home/runner/flags/build-tests/.keep
-          mkdir -p /home/runner/flags/build-input/
-          touch /home/runner/flags/build-input/.keep
-          mkdir -p /home/runner/flags/build-output/
-          touch /home/runner/flags/build-output/.keep
-          mkdir -p /home/runner/flags/run-solutions/
-          touch /home/runner/flags/run-solutions/.keep
+          mkdir -p $RUNNER_TEMP/flags/build-tests/
+          touch $RUNNER_TEMP/flags/build-tests/.keep
+          mkdir -p $RUNNER_TEMP/flags/build-input/
+          touch $RUNNER_TEMP/flags/build-input/.keep
+          mkdir -p $RUNNER_TEMP/flags/build-output/
+          touch $RUNNER_TEMP/flags/build-output/.keep
+          mkdir -p $RUNNER_TEMP/flags/run-solutions/
+          touch $RUNNER_TEMP/flags/run-solutions/.keep
 
       - name: Set input flag
         if: contains(github.event.inputs.input, matrix.problem)
         run: |
-          echo true > /home/runner/flags/build-tests/${{ matrix.problem }}
-          echo true > /home/runner/flags/build-input/${{ matrix.problem }}
+          echo true > $RUNNER_TEMP/flags/build-tests/${{ matrix.problem }}
+          echo true > $RUNNER_TEMP/flags/build-input/${{ matrix.problem }}
 
       - name: Set output flag
         if: contains(github.event.inputs.output, matrix.problem)
         run: |
-          echo true > /home/runner/flags/build-tests/${{ matrix.problem }}
-          echo true > /home/runner/flags/build-output/${{ matrix.problem }}
+          echo true > $RUNNER_TEMP/flags/build-tests/${{ matrix.problem }}
+          echo true > $RUNNER_TEMP/flags/build-output/${{ matrix.problem }}
 
       - name: Set solutions flag
         if: contains(github.event.inputs.solutions, matrix.problem)
         run: |
-          echo true > /home/runner/flags/build-tests/${{ matrix.problem }}
-          echo true > /home/runner/flags/run-solutions/${{ matrix.problem }}
+          echo true > $RUNNER_TEMP/flags/build-tests/${{ matrix.problem }}
+          echo true > $RUNNER_TEMP/flags/run-solutions/${{ matrix.problem }}
 
       - name: Upload flags
         uses: actions/upload-artifact@v2
         with:
           name: flags
-          path: /home/runner/flags/
+          path: ${{ runner.temp }}/flags/
 
   check-post:
     needs: [check-push, check-manually]
@@ -209,11 +209,11 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: flags
-          path: /home/runner/flags/
+          path: ${{ runner.temp }}/flags/
 
       - name: build-tests
         id: build-tests
-        working-directory: /home/runner/flags/build-tests/
+        working-directory: ${{ runner.temp }}/flags/build-tests/
         run: |
           probs=$(python3 -c 'import json, glob; print(json.dumps(glob.glob("*")))')
           echo $probs
@@ -221,7 +221,7 @@ jobs:
 
       - name: build-input
         id: build-input
-        working-directory: /home/runner/flags/build-input/
+        working-directory: ${{ runner.temp }}/flags/build-input/
         run: |
           probs=$(python3 -c 'import glob; print("".join(glob.glob("*")))')
           echo $probs
@@ -229,7 +229,7 @@ jobs:
 
       - name: build-output
         id: build-output
-        working-directory: /home/runner/flags/build-output/
+        working-directory: ${{ runner.temp }}/flags/build-output/
         run: |
           probs=$(python3 -c 'import glob; print("".join(glob.glob("*")))')
           echo $probs
@@ -237,7 +237,7 @@ jobs:
 
       - name: run-solutions
         id: run-solutions
-        working-directory: /home/runner/flags/run-solutions/
+        working-directory: ${{ runner.temp }}/flags/run-solutions/
         run: |
           probs=$(python3 -c 'import glob; print("".join(glob.glob("*")))')
           echo $probs
@@ -261,22 +261,12 @@ jobs:
           git config --local user.name "github-actions[bot]"
 
       - name: Install dependencies
+        if: ${{ runner.name == 'Hosted Agent' || startsWith(runner.name, 'GitHub Actions') }}
         run: |
           sudo apt-get install dos2unix python3-setuptools
           sudo python3 -m pip install psutil
 
-      - name: Install tps
-        run: |
-          git clone https://github.com/ioi-2017/tps.git
-          cd tps && sudo ./install-tps.sh
-
-      - name: env
-        env:
-          NEEDS: ${{ toJson(needs) }}
-          ENVS: ${{ toJson(env) }}
-        run: |
-          echo "$NEEDS"
-          echo "$ENVS"
+          bash -c "$(curl -fsSL https://raw.githubusercontent.com/ioi-2017/tps/master/online-installer/install.sh)"
 
       - name: Build inputs and outputs
         if: contains(needs.check-post.outputs.build-input, matrix.problem)
