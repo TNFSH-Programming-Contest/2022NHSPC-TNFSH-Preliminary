@@ -7,6 +7,5 @@ int main() {
 	registerValidation();
 	// about testlib, see https://codeforces.com/blog/entry/18291
 	inf.readEof();
-
 	return 0;
 }
