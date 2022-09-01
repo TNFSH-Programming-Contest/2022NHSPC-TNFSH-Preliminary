@@ -8,61 +8,12 @@ on:
       - 'p*/**'
   workflow_dispatch:
     inputs:
-      target:
+      problems:
         description: 'Problem labels to verify'
-        default: ''
 
 jobs:
-  problem-list:
-    if: ${{ github.repository != 'TNFSH-Programming-Contest/tps-starter' }}
-    runs-on: self-hosted
-    timeout-minutes: 3
-    outputs:
-      matrix: ${{ steps.problem-list.outputs.matrix }}
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Read problems
-        id: problem-list
-        run: |
-          problems=$(cat .problems.json)
-          echo "::set-output name=matrix::$problems"
-
-  verify:
-    needs: [problem-list]
-    runs-on: self-hosted
-    timeout-minutes: 3
-    strategy:
-      matrix:
-        problem: ${{ fromJson(needs.problem-list.outputs.matrix) }}
-      fail-fast: false
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Install dependencies
-        if: ${{ runner.name == 'Hosted Agent' || startsWith(runner.name, 'GitHub Actions') }}
-        run: |
-          sudo apt-get install dos2unix python3-setuptools
-          sudo python3 -m pip install psutil
-
-          bash -c "$(curl -fsSL https://raw.githubusercontent.com/ioi-2017/tps/master/online-installer/install.sh)"
-
-      - uses: dorny/paths-filter@v2
-        id: changes
-        with:
-          filters: |
-            any:
-              - p${{ matrix.problem }}/**
-
-      - name: Verify
-        if: ${{ (github.event_name == 'push' && steps.changes.outputs.any == 'true') || (github.event_name == 'workflow_dispatch' && contains(github.event.inputs.target, matrix.problem)) }}
-        working-directory: p${{ matrix.problem }}
-        run: |
-          set +e
-
-          tps verify | tee verify-result.txt
-          grep "ERROR:" verify-result.txt >/dev/null
-          if [ $? -eq 0 ]; then
-            exit 1
-          fi
+  run:
+    uses: TNFSH-Programming-Contest/tps-actions/.github/workflows/tps-verify.yml@main
+    with:
+      problems: ${{ github.event.inputs.problems }}
+      runs-on: self-hosted

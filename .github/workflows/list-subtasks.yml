@@ -9,71 +9,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  list:
-    if: ${{ github.repository != 'TNFSH-Programming-Contest/tps-starter' }}
-    runs-on: self-hosted
-    timeout-minutes: 3
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: List subtasks
-        shell: python3 {0}
-        run: |
-          import json
-
-          with open('.problems.json', 'r', encoding='utf8') as f:
-            problems = json.load(f)
-
-          all_subtasks = {}
-          max_subtask = 0
-          for pro in problems:
-            with open('p{}/subtasks.json'.format(pro), 'r', encoding='utf8') as f:
-              subtasks = json.load(f)['subtasks']
-
-            all_subtasks[pro] = []
-            for subtask in sorted(subtasks.values(), key=lambda v: v['index']):
-              if subtask['index'] == 0:
-                continue
-              all_subtasks[pro].append((subtask['score'], subtask['text']))
-
-            max_subtask = max(max_subtask, len(all_subtasks[pro]))
-
-          output = ''
-          output += '| |'
-          for i in range(max_subtask):
-            output += ' {} |'.format(i + 1)
-          output += '\n'
-
-          output += '|'
-          for i in range(max_subtask + 1):
-            output += ' --- |'
-          output += '\n'
-
-          for pro in problems:
-            output += '| {} |'.format(pro)
-            for subtask in all_subtasks[pro]:
-              output += ' {}<br>{} |'.format(subtask[0], subtask[1])
-            output += '\n'
-
-          with open('README.md', 'r+', encoding='utf8') as f:
-            text = f.read()
-            flag = '<!-- subtasks start -->'
-            idx1 = text.index(flag)
-            idx2 = text.index('<!-- subtasks end -->')
-            text = text[:idx1] + flag + '\n' + output + text[idx2:]
-            f.seek(0)
-            f.write(text)
-
-      - name: Commit files
-        run: |
-          git add README.md
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git diff-index --quiet HEAD -- || git commit -m "Update subtasks"
-
-      - name: Push changes
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+  run:
+    uses: TNFSH-Programming-Contest/tps-actions/.github/workflows/list-subtasks.yml@main
+    with:
+      runs-on: self-hosted
