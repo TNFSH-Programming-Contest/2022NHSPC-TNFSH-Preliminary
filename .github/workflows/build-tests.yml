@@ -29,4 +29,3 @@ jobs:
       input: ${{ github.event.inputs.input }}
       output: ${{ github.event.inputs.output }}
       solutions: ${{ github.event.inputs.solutions }}
-      runs-on: self-hosted

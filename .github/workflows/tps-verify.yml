@@ -16,4 +16,3 @@ jobs:
     uses: TNFSH-Programming-Contest/tps-actions/.github/workflows/tps-verify.yml@main
     with:
       problems: ${{ github.event.inputs.problems }}
-      runs-on: self-hosted

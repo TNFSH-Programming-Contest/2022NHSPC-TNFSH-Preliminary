@@ -29,4 +29,3 @@ jobs:
     with:
       problems: ${{ inputs.problems }}
       merge: ${{ inputs.merge && fromJson(inputs.merge) || false }}
-      runs-on: self-hosted

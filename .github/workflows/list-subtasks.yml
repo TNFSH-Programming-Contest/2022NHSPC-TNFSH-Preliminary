@@ -11,5 +11,3 @@ on:
 jobs:
   run:
     uses: TNFSH-Programming-Contest/tps-actions/.github/workflows/list-subtasks.yml@main
-    with:
-      runs-on: self-hosted

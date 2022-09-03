@@ -11,4 +11,3 @@ jobs:
     uses: TNFSH-Programming-Contest/tps-actions/.github/workflows/new-problem.yml@main
     with:
       count: ${{ fromJson(github.event.inputs.count) }}
-      runs-on: self-hosted
