@@ -47,6 +47,15 @@
 ## 範例輸出 1
 \testfile{0-01.out}
 
+## 範例說明 1
+\begin{figure}[h]
+\centering
+\includegraphics[width=5cm]{sample1.jpg}
+\caption{擷取自遊戲《Tents and Trees Puzzles》}
+\end{figure}
+
+\clearpage
+
 ## 範例輸入 2
 \testfile{0-02.in}
 
