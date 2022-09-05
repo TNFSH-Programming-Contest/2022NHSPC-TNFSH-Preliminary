@@ -132,7 +132,7 @@ int main(int argc, char* argv[]) {
 					cont++;
 				}
 			}
-			if (cont == 1 || solveCircle) {
+			if (cont == 1 || (cont > 1 && solveCircle)) {
 				ptable[pr][pc] = '.';
 				it = tents.erase(it);
 				remtent--;
