@@ -7,11 +7,5 @@
 		"except": {
 			"all": "incorrect"
 		}
-	},
-	"occupied.cpp": {
-		"verdict": "correct",
-		"except": {
-			"all": "incorrect"
-		}
 	}
 }
