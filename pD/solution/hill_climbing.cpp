@@ -60,7 +60,7 @@ int calc_conflict(Board &board) {
 	for (int q = 1; q < n; q++) {
 		for (int w1 = 0; w1 < tar_rcnt[q]; w1++) {
 			for (int w2 = 0; w2 < tar_rcnt[q + 1]; w2++) {
-				if (board.used[q][w1] == board.used[q + 1][w2]) {
+				if (abs(board.used[q][w1] - board.used[q + 1][w2]) <= 1) {
 					res += 1;
 				}
 			}
@@ -94,7 +94,7 @@ void search() {
 
 	int step = 0, restart_cnt = 0;
 	vector<int> best_idx;
-	while (prev_conflict > 0 && step < 10000) {
+	while (prev_conflict > 0 && step < 300000) {
 		step++;
 		best_idx.clear();
 		min_conflict = 99999;

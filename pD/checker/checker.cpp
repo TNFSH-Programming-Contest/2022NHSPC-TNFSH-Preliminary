@@ -39,8 +39,20 @@ int main(int argc, char* argv[]) {
 
 	string jans = ans.readString();
 
+	vector<pair<int, int>> dir8;
+	for (int q = -1; q <= 1; q++) {
+		for (int w = -1; w <= 1; w++) {
+			if (q == 0 && w == 0) {
+				continue;
+			}
+			dir8.push_back({q, w});
+		}
+	}
+	pair<int, int> dir4[] = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
+
 	char ptable[n][m];
-	int prcnt[n] = {}, pccnt[m] = {};
+	int prcnt[n] = {}, pccnt[m] = {}, tr, tc;
+	set<pair<int, int>> tents;
 	string s;
 	for (int q = 0; q < n; q++) {
 		s = ouf.readString();
@@ -66,6 +78,7 @@ int main(int argc, char* argv[]) {
 			}
 
 			if (ptable[q][w] == 'A') {
+				tents.insert({q, w});
 				prcnt[q]++;
 				pccnt[w]++;
 				if (q > 0 && itable[q - 1][w] == 'T') {
@@ -79,6 +92,14 @@ int main(int argc, char* argv[]) {
 				} else {
 					quitf(_wa, "Tent (%d, %d) not connected to Tree.", q + 1, w + 1);
 				}
+
+				for (int e = 0; e < 8; e++) {
+					tr = q + dir8[e].first;
+					tc = w + dir8[e].second;
+					if (tr >= 0 && tr < n && tc >= 0 && tc < m && ptable[tr][tc] == 'A') {
+						quitf(_wa, "Tent (%d, %d) is close to tent (%d, %d).", q + 1, w + 1, tr + 1, tc + 1);
+					}
+				}
 			}
 		}
 	}
@@ -87,9 +108,43 @@ int main(int argc, char* argv[]) {
 			quitf(_wa, "Count of tents on row %d incorrect.", q + 1);
 		}
 	}
+	int remtent = 0;
 	for (int q = 0; q < m; q++) {
 		if (ccnt[q] != pccnt[q]) {
 			quitf(_wa, "Count of tents on col %d incorrect.", q + 1);
+		}
+		remtent += ccnt[q];
+	}
+	bool changed;
+	int pr, pc, cont;
+
+	while (remtent > 0) {
+		cout << remtent << endl;
+		changed = false;
+		for (auto it = tents.begin(); it != tents.end();) {
+			cont = 0;
+			for (int q = 0; q < 4; q++) {
+				tr = it->first + dir4[q].first;
+				tc = it->second + dir4[q].second;
+				if (tr >= 0 && tr < n && tc >= 0 && tc < m && ptable[tr][tc] == 'T') {
+					pr = tr;
+					pc = tc;
+					cont++;
+				}
+			}
+			if (cont >= 1) {
+				changed = true;
+			}
+			if (cont == 1) {
+				ptable[pr][pc] = '.';
+				it = tents.erase(it);
+				remtent--;
+			} else {
+				it++;
+			}
+		}
+		if (!changed) {
+			quitf(_wa, "Tent (%d, %d) connected to occupied tree", (*(tents.begin())).first, (*(tents.begin())).second);
 		}
 	}
 

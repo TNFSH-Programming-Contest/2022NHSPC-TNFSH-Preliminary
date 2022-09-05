@@ -47,7 +47,7 @@ int main(int argc, char* argv[]) {
 	shuffle(pos.begin(), pos.end());
 
 	int tcnt = rnd.next(t1, t2);
-	int r, c, di, tr, tc;
+	int r, c, tr, tc;
 	bool puttree;
 	for (auto tpos : pos) {
 		r = tpos.first;

@@ -1,11 +1,27 @@
 {
-	"correct.cpp": {
+	"correct3.cpp": {
 		"verdict": "model_solution"
 	},
+	"correct.cpp": {
+		"verdict": "correct",
+		"except": {
+			"samples": "incorrect",
+			"all": "incorrect"
+		}
+	},
 	"correct2.cpp": {
-		"verdict": "correct"
+		"verdict": "correct",
+		"except": {
+			"all": "incorrect"
+		}
 	},
 	"hill_climbing.cpp": {
 		"verdict": "correct"
+	},
+	"occupied.cpp": {
+		"verdict": "correct",
+		"except": {
+			"all": "incorrect"
+		}
 	}
 }
