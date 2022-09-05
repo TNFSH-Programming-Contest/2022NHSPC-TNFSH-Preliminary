@@ -1,4 +1,8 @@
-// By xiplus
+/**
+ * By xiplus
+ * 帳篷不能8方位相鄰
+ * DFS每棵樹，嘗試4個方位
+ */
 #include <bits/stdc++.h>
 using namespace std;
 #define MAXN 105

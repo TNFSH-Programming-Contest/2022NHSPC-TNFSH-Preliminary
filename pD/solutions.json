@@ -1,22 +1,12 @@
 {
-	"correct3.cpp": {
+	"xiplus_dfs_tree.cpp": {
 		"verdict": "model_solution"
 	},
-	"correct.cpp": {
-		"verdict": "correct",
-		"except": {
-			"samples": "incorrect",
-			"all": "incorrect"
-		}
-	},
-	"correct2.cpp": {
+	"xiplus_dfs_land.cpp": {
 		"verdict": "correct",
 		"except": {
 			"all": "incorrect"
 		}
-	},
-	"hill_climbing.cpp": {
-		"verdict": "correct"
 	},
 	"occupied.cpp": {
 		"verdict": "correct",

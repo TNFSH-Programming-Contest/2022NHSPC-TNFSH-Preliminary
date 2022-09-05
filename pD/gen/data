@@ -20,11 +20,13 @@ gen2 1 1 1 8 20 20 ZWRKXYQVBW
 @include samples
 @include neme2
 @include ne1
-manual 3-01.in
-gen2 6 8 6 8 20 20 WMOFYKQLIJ
-gen2 6 8 6 8 20 20 SJUYOUOVXY
-gen2 6 8 6 8 20 20 RZYUVMMSEA
-gen2 6 8 6 8 20 20 AZDORQJMTS
+# hack xiplus_dfs_land.cpp
+gen2 6 8 6 8 20 20 YLUSHHHOVN
+gen2 6 8 6 8 20 20 PQECLRZRDF
+gen2 6 8 6 8 20 20 PRXMJEDVPG
+gen2 6 8 6 8 20 20 WPUSTDTWIA
+gen2 6 8 6 8 20 20 JSXMEBUFQR
+# random
 gen2 6 8 6 8 20 20 KLXVBRTEJA
 gen2 6 8 6 8 20 20 KQZYFUAIHR
 gen2 6 8 6 8 20 20 YUKODJZKSM

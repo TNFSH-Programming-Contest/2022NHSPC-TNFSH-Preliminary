@@ -1,13 +1,15 @@
-// By xiplus
+/**
+ * By xiplus
+ * 帳篷不能8方位相鄰
+ * DSF每個位置決定是否放帳篷
+ * 錯誤作法
+ */
 #include <bits/stdc++.h>
 using namespace std;
 #define MAXN 105
-const int LAND = 1;
-const int WALL = 2;	 // wall or not-connected tree
-const int USED = 4;	 // connected to tent
-const int TREE = 8;
-const int TENT = 16;
-const int BANNED = WALL | USED | TREE | TENT;
+const int WALL = 1;
+const int TREE = 2;
+const int TENT = 4;
 #define endl '\n'
 
 int v[MAXN][MAXN];
@@ -16,6 +18,7 @@ int rcnt[MAXN];
 int ccnt[MAXN];
 int cur_r[MAXN];
 int cur_c[MAXN];
+vector<pair<int, int>> dir8;
 
 bool found = false;
 
@@ -24,7 +27,6 @@ void dfs(int r, int c) {
 		return;
 	}
 
-	// cout << "dfs " << r << " " << c << endl;
 	if (r > n) {
 		bool ok = true;
 		for (int q = 1; q <= n; q++) {
@@ -59,23 +61,28 @@ void dfs(int r, int c) {
 
 	// Put
 	if (!v[r][c] && cur_r[r] < rcnt[r] && cur_c[c] < ccnt[c]) {
-		v[r][c] |= TENT;
-		cur_r[r]++;
-		cur_c[c]++;
-		v[r][c + 1] |= USED;
-		v[r + 1][c] |= USED;
-		if (c == m) {
-			if (cur_r[r] == rcnt[r]) {
-				dfs(r + 1, 1);
+		bool conflict = false;
+		for (int q = 0; q < 8; q++) {
+			if (v[r + dir8[q].first][c + dir8[q].second] & TENT) {
+				conflict = true;
+				break;
 			}
-		} else {
-			dfs(r, c + 1);
 		}
-		v[r][c] &= ~TENT;
-		cur_r[r]--;
-		cur_c[c]--;
-		v[r][c + 1] &= ~USED;
-		v[r + 1][c] &= ~USED;
+		if (!conflict) {
+			v[r][c] |= TENT;
+			cur_r[r]++;
+			cur_c[c]++;
+			if (c == m) {
+				if (cur_r[r] == rcnt[r]) {
+					dfs(r + 1, 1);
+				}
+			} else {
+				dfs(r, c + 1);
+			}
+			v[r][c] &= ~TENT;
+			cur_r[r]--;
+			cur_c[c]--;
+		}
 	}
 	// Not put
 	if (c == m) {
@@ -88,6 +95,15 @@ void dfs(int r, int c) {
 }
 
 int main() {
+	for (int q = -1; q <= 1; q++) {
+		for (int w = -1; w <= 1; w++) {
+			if (q == 0 && w == 0) {
+				continue;
+			}
+			dir8.push_back({q, w});
+		}
+	}
+
 	cin >> n >> m;
 	for (int q = 1; q <= n; q++) {
 		cin >> rcnt[q];
