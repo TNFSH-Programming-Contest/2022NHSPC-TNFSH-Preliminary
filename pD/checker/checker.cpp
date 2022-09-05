@@ -50,7 +50,7 @@ int main(int argc, char* argv[]) {
 	}
 	pair<int, int> dir4[] = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
 
-	char ptable[n][m];
+	char ptable[n][m] = {};
 	int prcnt[n] = {}, pccnt[m] = {}, tr, tc;
 	set<pair<int, int>> tents;
 	string s;
@@ -116,8 +116,9 @@ int main(int argc, char* argv[]) {
 		remtent += ccnt[q];
 	}
 	bool changed;
-	int pr, pc, cont;
+	int pr = 0, pc = 0, cont;
 
+	bool solveCircle = false;
 	while (remtent > 0) {
 		changed = false;
 		for (auto it = tents.begin(); it != tents.end();) {
@@ -131,7 +132,7 @@ int main(int argc, char* argv[]) {
 					cont++;
 				}
 			}
-			if (cont == 1) {
+			if (cont == 1 || solveCircle) {
 				ptable[pr][pc] = '.';
 				it = tents.erase(it);
 				remtent--;
@@ -141,7 +142,13 @@ int main(int argc, char* argv[]) {
 			}
 		}
 		if (!changed) {
-			quitf(_wa, "Tent (%d, %d) connected to occupied tree", (*(tents.begin())).first, (*(tents.begin())).second);
+			if (!solveCircle) {
+				solveCircle = true;
+			} else {
+				quitf(_wa, "Tent (%d, %d) connected to occupied tree", (*(tents.begin())).first, (*(tents.begin())).second);
+			}
+		} else {
+			solveCircle = false;
 		}
 	}
 
