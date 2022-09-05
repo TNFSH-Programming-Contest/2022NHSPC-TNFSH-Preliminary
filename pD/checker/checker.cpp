@@ -119,7 +119,6 @@ int main(int argc, char* argv[]) {
 	int pr, pc, cont;
 
 	while (remtent > 0) {
-		cout << remtent << endl;
 		changed = false;
 		for (auto it = tents.begin(); it != tents.end();) {
 			cont = 0;
@@ -132,13 +131,11 @@ int main(int argc, char* argv[]) {
 					cont++;
 				}
 			}
-			if (cont >= 1) {
-				changed = true;
-			}
 			if (cont == 1) {
 				ptable[pr][pc] = '.';
 				it = tents.erase(it);
 				remtent--;
+				changed = true;
 			} else {
 				it++;
 			}
@@ -153,6 +150,4 @@ int main(int argc, char* argv[]) {
 	}
 
 	quitf(_ok, "The answer is correct.");
-
-	return 0;
 }
