@@ -2,7 +2,7 @@
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=2in]{img.jpg}
+\includegraphics[width=12cm]{img.jpg}
 \caption{廣第一次與02一起操縱FRANXX，出自動畫《Darling in the FRANXX》}
 \end{figure}
 
