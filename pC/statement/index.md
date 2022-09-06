@@ -2,7 +2,7 @@
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=12cm]{img.png}
+\includegraphics[width=12cm]{img.jpg}
 \caption{里見蓮太郎與其搭檔藍原延珠一起扣動天梯的板機將天蠍座擊敗，出自動畫《黑色子彈》}
 \end{figure}
 
