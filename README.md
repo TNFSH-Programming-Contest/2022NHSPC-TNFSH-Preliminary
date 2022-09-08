@@ -15,16 +15,3 @@
 | F | [statement](pF/statement) [md](pF/statement/index.md) [pdf](pF/statement/index.pdf) | [gen](pF/gen) | [validator](pF/validator) | [solution](pF/solution) [check](pF/solutions-check.txt) | [tests](pF/tests) | [problem](pF/problem.json) [solutions](pF/solutions.json) [subtasks](pF/subtasks.json) |
 | G | [statement](pG/statement) [md](pG/statement/index.md) [pdf](pG/statement/index.pdf) | [gen](pG/gen) | [validator](pG/validator) | [solution](pG/solution) [check](pG/solutions-check.txt) | [tests](pG/tests) | [problem](pG/problem.json) [solutions](pG/solutions.json) [subtasks](pG/subtasks.json) |
 <!-- new problem -->
-
-## Subtasks
-<!-- subtasks start -->
-| | 1 | 2 | 3 | 4 | 5 | 6 |
-| --- | --- | --- | --- | --- | --- | --- |
-| A | 100<br>無額外限制 |
-| B | 23<br>$\forall 1 \leq i \leq 2n, a_i$ 皆為奇數或皆為偶數 | 77<br>無額外限制 |
-| C | 12<br>$1 \leq n \leq 7$ | 21<br>$\forall 1 \leq i \leq n, a_i=i$ | 21<br>$1 \leq n \leq 1000$ | 46<br>無額外限制 |
-| D | 20<br>$n=m=2$ | 30<br>$n=1$ | 50<br>無額外限制 |
-| E | 100<br>無額外限制 |
-| F | 10<br>$2 \le n,m,q \le 10^2$ | 10<br>$2 \le n,m \le 10^3$ | 20<br>$2 \le n,m \le 10^6, q=1$，詢問在左上和右下 | 20<br>$2 \le n,m \le 10^6$，詢問的點都在邊界上 | 20<br>$2 \le n,m \le 10^6$ | 20<br>無額外限制 |
-| G | 17<br>$w=1$ | 10<br>$m = n-1$ | 23<br>$n \le 1000$ | 50<br>無額外限制 |
-<!-- subtasks end -->

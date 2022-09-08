@@ -1,0 +1,13 @@
+name: Generate report
+
+on:
+  push:
+    branches:
+      - '**'
+    paths:
+      - 'p*/**'
+  workflow_dispatch:
+
+jobs:
+  run:
+    uses: TNFSH-Programming-Contest/tps-actions/.github/workflows/generate-report.yml@main
