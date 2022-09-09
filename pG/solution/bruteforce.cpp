@@ -77,7 +77,7 @@ signed main()
 		else cout << "no\n";
 
 		edg[(x-1)*2].ff = tmp;
-		edg[(x-1)*2+1].ff = tmp;		
+		edg[(x-1)*2+1].ff = tmp;
 	}
 }
 // 0, 1, 2, 3, 4, 5

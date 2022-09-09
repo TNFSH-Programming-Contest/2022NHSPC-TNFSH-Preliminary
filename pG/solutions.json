@@ -1,5 +1,8 @@
 {
 	"correct.cpp": {
 		"verdict": "model_solution"
+	},
+	"bruteforce.cpp":{
+		"verdict": "time_limit"
 	}
 }
