@@ -6,7 +6,7 @@
 | contest_name |  [:white_check_mark:](pA/problem.json) | [:white_check_mark:](pB/problem.json) | [:white_check_mark:](pC/problem.json) | [:white_check_mark:](pD/problem.json) | [:x:](pE/problem.json) | [:x:](pF/problem.json) | [:white_check_mark:](pG/problem.json) |
 | problem_label |  [:white_check_mark:](pA/problem.json) | [:white_check_mark:](pB/problem.json) | [:white_check_mark:](pC/problem.json) | [:white_check_mark:](pD/problem.json) | [:x:](pE/problem.json) | [:x:](pF/problem.json) | [:white_check_mark:](pG/problem.json) |
 | name |  [:white_check_mark:](pA/problem.json)<br>beater | [:white_check_mark:](pB/problem.json)<br>FRANXXParing | [:white_check_mark:](pC/problem.json)<br>ScorpioHunting | [:white_check_mark:](pD/problem.json)<br>TentsAndTrees | [:x:](pE/problem.json) | [:x:](pF/problem.json) | [:white_check_mark:](pG/problem.json)<br>lycoreco |
-| title |  [:white_check_mark:](pA/problem.json)<br>封閉者 | [:white_check_mark:](pB/problem.json)<br>FRANXX 配對 | [:white_check_mark:](pC/problem.json)<br>討伐天蠍座 | [:white_check_mark:](pD/problem.json)<br>田野調查 | [:x:](pE/problem.json) | [:x:](pF/problem.json) | [:white_check_mark:](pG/problem.json)<br>如何拖延 |
+| title |  [:white_check_mark:](pA/problem.json)<br>封閉者 | [:white_check_mark:](pB/problem.json)<br>FRANXX 配對 | [:white_check_mark:](pC/problem.json)<br>討伐天蠍座 | [:white_check_mark:](pD/problem.json)<br>田野調查 | [:x:](pE/problem.json) | [:x:](pF/problem.json) | [:white_check_mark:](pG/problem.json)<br>論拖延 |
 | memory_limit |  512 | 512 | 512 | 512 | 512 | 512 | 512 |
 | time_limit |  1.0 | 1.0 | 1.0 | 1.0 | 1.0 | 1.0 | 2.0 |
 | has_checker |  False | False | False | True | False | False | False |
