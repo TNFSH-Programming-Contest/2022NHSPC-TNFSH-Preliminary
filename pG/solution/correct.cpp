@@ -1,5 +1,8 @@
-#include <bits/stdc++.h>
+#include <vector>
+#include <iostream>
+#include <queue>
 #define int long long
+
 #define rep(i,j,k) for (int i=j; i<=k; i++)
 #define de(x) cout << #x << "=" << x << ", "
 #define dd cout << '\n';
@@ -11,7 +14,7 @@
 using namespace std;
 typedef pair<int,int> pii;
 
-const int N = 1e5+10, MOD1 = 1e9+7, MOD2 = 1e8+7;
+const int N = 2e5+10, MOD1 = 1e9+7, MOD2 = 1e8+7;
 
 int n, m, s, t, q;
 
