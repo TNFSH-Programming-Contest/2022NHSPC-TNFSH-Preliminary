@@ -1,8 +1,8 @@
 #include <vector>
 #include <iostream>
 #include <queue>
+#include <cstring>
 #define int long long
-
 #define rep(i,j,k) for (int i=j; i<=k; i++)
 #define de(x) cout << #x << "=" << x << ", "
 #define dd cout << '\n';
