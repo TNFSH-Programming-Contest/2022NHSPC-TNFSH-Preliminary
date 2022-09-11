@@ -12,12 +12,18 @@ int main()
 	int n,m;
 	long long k;
 	n=inf.readInt(1,1000);
+	inf.readSpace();
 	m=inf.readInt(1,1000);
+	inf.readSpace();
 	k=inf.readLong(1LL,1000000000000000000LL);
 	inf.readEoln();
 	
 	while(n--)
+	{
 		inf.readInt(1,m);
+		if(n)
+			inf.readSpace();
+	}
 	inf.readEoln();
 
 	inf.readEof();
