@@ -8,7 +8,7 @@
 | name |  [:white_check_mark:](pA/problem.json)<br>beater | [:white_check_mark:](pB/problem.json)<br>FRANXXParing | [:white_check_mark:](pC/problem.json)<br>ScorpioHunting | [:white_check_mark:](pD/problem.json)<br>TentsAndTrees | [:x:](pE/problem.json) | [:x:](pF/problem.json) | [:white_check_mark:](pG/problem.json)<br>LycoReco |
 | title |  [:white_check_mark:](pA/problem.json)<br>封閉者 | [:white_check_mark:](pB/problem.json)<br>FRANXX 配對 | [:white_check_mark:](pC/problem.json)<br>討伐天蠍座 | [:white_check_mark:](pD/problem.json)<br>田野調查 | [:x:](pE/problem.json) | [:x:](pF/problem.json) | [:white_check_mark:](pG/problem.json)<br>論拖延 |
 | memory_limit |  512 | 512 | 512 | 512 | 512 | 512 | 512 |
-| time_limit |  1.0 | 1.0 | 1.0 | 1.0 | 1.0 | 1.0 | 2.0 |
+| time_limit |  1.0 | 1.0 | 1.0 | 1.0 | 3.0 | 1.0 | 2.0 |
 | has_checker |  False | False | False | True | False | False | False |
 | gen | [:white_check_mark:](pA/gen) | [:white_check_mark:](pB/gen) | [:white_check_mark:](pC/gen) | [:white_check_mark:](pD/gen) | [:white_check_mark:](pE/gen) | [:white_check_mark:](pF/gen) | [:white_check_mark:](pG/gen) |
 | solution | [:white_check_mark:](pA/solution) | [:white_check_mark:](pB/solution) | [:white_check_mark:](pC/solution) | [:white_check_mark:](pD/solution) | [:white_check_mark:](pE/solution) | [:x:](pF/solution)<br>[correct.cpp](pF/solution/correct.cpp) | [:white_check_mark:](pG/solution) |
