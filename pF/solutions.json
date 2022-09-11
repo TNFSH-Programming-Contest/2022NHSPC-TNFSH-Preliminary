@@ -3,6 +3,6 @@
 		"verdict": "model_solution"
 	},
 	"dp.cpp": {
-		"verdict": "TLE"
+		"verdict": "time_limit"
 	}
 }

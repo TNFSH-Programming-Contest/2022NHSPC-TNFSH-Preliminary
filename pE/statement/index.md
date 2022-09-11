@@ -1,4 +1,4 @@
-#
+# 超新手取向迷宮
 
 <!-- \begin{figure}[h]
 \centering
