@@ -9,10 +9,11 @@ int main()
 {
 	registerValidation();
 	
-	int n,m,k;
+	int n,m;
+	long long k;
 	n=inf.readInt(1,1000);
 	m=inf.readInt(1,1000);
-	k=inf.readLong(1,1000000000000000000);
+	k=inf.readLong(1LL,1000000000000000000LL);
 	inf.readEoln();
 	
 	while(n--)
