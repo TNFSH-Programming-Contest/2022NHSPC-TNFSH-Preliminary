@@ -1,56 +1,18 @@
 #include<bits/stdc++.h>
 #include "testlib.h"
-//#define int long long
+#define int long long
 #define matsuri pair<int,int>
 const int iris = 1e9+7;
 using namespace std;
 
-const long long la_pluma = 1e5;
-set<matsuri> arr,qwq;
-
-void gen(int n,int m,int q,int ouo)
+void gen(int n,int m,int k)
 {
-	int k,cnt,x,y,a,b,c,d;
-	k=min((long long)n*m/2, la_pluma);
-	if(n==100)
-		k=k*4/5;
-	cnt=k*2;
-	while(arr.size()<k && cnt--)
-	{
-		x=rnd.next(1,n);
-		y=rnd.next(1,m);
-		arr.insert(make_pair(x,y));
-	}
-	
-	if(ouo==0)
-	{
-		cnt=q*2;
-		while(qwq.size()<q && cnt--)
-		{
-			a=rnd.next(1,n);
-			b=rnd.next(1,m);
-			c=rnd.next(1,n);
-			d=rnd.next(1,m);
-			if(arr.find(make_pair(a,b))==arr.end() && arr.find(make_pair(c,d))==arr.end())
-			{
-				qwq.insert(make_pair(a,b));
-				qwq.insert(make_pair(c,d));
-			}
-		}
-	}
-	
-	cout<<n<<' '<<m<<' '<<arr.size()<<'\n';
-	for(auto [x,y]:arr)
-	{
-		cout<<x<<' '<<y<<'\n';
-	}
-	cout<<qwq.size()<<'\n';
-	
-	bool f=1;
-	for(auto [x,y]:qwq)
-	{
-		cout<<x<<' '<<y<<" \n"[f^=1];
-	}
+	n=rnd.next(1LL,n);
+	m=rnd.next(1LL,m);
+	k=rnd.next(1LL,k);
+	cout<<n<<' '<<m<<' '<<k<<'\n';
+	for(int i=0;i<n;i++)
+		cout<<rnd.next(1LL,m)<<" \n"[i==n-1];
 }
 
 signed main(int argc, char* argv[])
@@ -62,19 +24,16 @@ signed main(int argc, char* argv[])
 	
 	int a=atoi(argv[1]);
 	if(a==1)
-		gen(100,100,100,0);
+		gen(5,5,5);
 	else if(a==2)
-		gen(1000,1000,la_pluma,0);
+		gen(100,100,100);
 	else if(a==3)
-		gen(100000,100000,1,1);
+		gen(1,1,1e18);
 	else if(a==4)
-		gen(100000,100000,1,2);
+		gen(1000,100,1e18);
 	else if(a==5)
-		gen(100000,100000,la_pluma,0);
-	else if(a==6)
-		gen(1000000000,1000000000,la_pluma,0);
+		gen(1000,1000,1e18);
 	else
-		cout<<"uwu\n";
-	
+		cout<<"meow"<<'\n';
 	return 0;
 }

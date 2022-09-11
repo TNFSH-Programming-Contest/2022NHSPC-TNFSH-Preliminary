@@ -9,26 +9,15 @@ int main()
 {
 	registerValidation();
 	
-	int n,m,q,k,a,b,c,d;
-	n=inf.readInt(1,1000000000);
-	m=inf.readInt(1,1000000000);
-	k=inf.readInt(1,100000);
+	int n,m,k;
+	n=inf.readInt(1,1000);
+	m=inf.readInt(1,1000);
+	k=inf.readLong(1,1000000000000000000);
 	inf.readEoln();
-	for(int i=0;i<k;i++)
-	{
-		a=inf.readInt(1,n);
-		b=inf.readInt(1,m);
-		inf.readEoln();
-	}
-	q=inf.readInt(1,100000);
-	for(int i=0;i<q;i++)
-	{
-		a=inf.readInt(1,n);
-		b=inf.readInt(1,m);
-		c=inf.readInt(1,n);
-		d=inf.readInt(1,m);
-		inf.readEoln();
-	}
+	
+	while(n--)
+		inf.readInt(1,m);
+	inf.readEoln();
 
 	inf.readEof();
 

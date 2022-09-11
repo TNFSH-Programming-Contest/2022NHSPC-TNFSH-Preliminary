@@ -1,8 +1,8 @@
 {
-	"contest_name": "TODO: 競賽名稱",
-	"problem_label": "TODO: A-G?",
-	"name": "TODO:_English_short_name",
-	"title": "TODO: 題目名稱",
+	"contest_name": "TODO: 111學年度資訊學科能力競賽臺南一中校內初選",
+	"problem_label": "TODO: E",
+	"name": "TODO:Carla",
+	"title": "TODO: 新手迷宮",
 	"memory_limit": 512,
 	"time_limit": 1.0,
 	"type": "Batch",

@@ -1,5 +1,8 @@
 {
 	"AC.cpp": {
 		"verdict": "model_solution"
+	},
+	"dp.cpp": {
+		"verdict": "TLE"
 	}
 }

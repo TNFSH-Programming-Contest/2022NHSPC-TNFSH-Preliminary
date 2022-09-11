@@ -1,5 +1,6 @@
 {
     "global_validators": [
+        "validator.cpp"
     ],
     "subtasks": {
         "samples": {
@@ -8,39 +9,33 @@
             "text": "範例輸入輸出",
             "validators": []
         },
-        "task1": {
+        "en": {
             "index": 1,
-            "score": 10,
-            "text": "$2 \\le n,m,q \\le 10^2$",
+            "score": 13,
+            "text": "$1 \\le n,m,k \\le 5$",
             "validators": []
         },        
-        "task2": {
+        "nmk": {
             "index": 2,
-            "score": 10,
-            "text": "$2 \\le n,m \\le 10^3$",
+            "score": 21,
+            "text": "$1 \\le n,m,k \\le 100$",
             "validators": []
         },
-        "task3": {
+        "fib": {
             "index": 3,
-            "score": 20,
-            "text": "$2 \\le n,m \\le 10^6, q=1$，詢問在左上和右下",
+            "score": 18,
+            "text": "$n,m = 1$",
             "validators": []
         },        
-        "task4": {
+        "mmm": {
             "index": 4,
-            "score": 20,
-            "text": "$2 \\le n,m \\le 10^6$，詢問的點都在邊界上",
+            "score": 35,
+            "text": "$1 \\le m \\le 100$",
             "validators": []
         },        
-        "task5": {
+        "full": {
             "index": 5,
-            "score": 20,
-            "text": "$2 \\le n,m \\le 10^6$",
-            "validators": []
-        },        
-        "task6": {
-            "index": 6,
-            "score": 20,
+            "score": 13,
             "text": "無額外限制",
             "validators": []
         }
