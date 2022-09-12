@@ -1,4 +1,4 @@
-# 封閉者
+# 封弊者
 
 \begin{figure}[h]
 \centering
