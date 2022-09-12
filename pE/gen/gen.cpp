@@ -12,8 +12,7 @@ void gen(int n,int m,int q,int ouo)
 {
 	int k,cnt,x,y,a,b,c,d;
 	k=min((long long)n*m/2, la_pluma);
-	if(n==100)
-		k=k*4/5;
+	k=rnd.next(1,k);
 	cnt=k*2;
 	while(arr.size()<k && cnt--)
 	{

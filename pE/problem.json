@@ -1,8 +1,8 @@
 {
-	"contest_name": "TODO: 111學年度資訊學科能力競賽臺南一中校內初選",
-	"problem_label": "TODO: E",
-	"name": "TODO:Carla",
-	"title": "TODO: 超新手取向迷宮",
+	"contest_name": "111學年度資訊學科能力競賽臺南一中校內初選",
+	"problem_label": "E",
+	"name": "Carla",
+	"title": "超新手取向迷宮",
 	"memory_limit": 512,
 	"time_limit": 3.0,
 	"type": "Batch",
