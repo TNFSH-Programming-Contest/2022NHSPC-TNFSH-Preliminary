@@ -8,26 +8,32 @@
             "text": "範例輸入輸出",
             "validators": []
         },
-        "we1": {
+        "chain": {
             "index": 1,
+            "score": 8,
+            "text": "保證是一條鏈",
+            "validators": []
+        },
+        "we1": {
+            "index": 2,
             "score": 17,
             "text": "$w=1$",
             "validators": []
         },        
         "tree": {
-            "index": 2,
+            "index": 3,
             "score": 10,
             "text": "$m = n-1$",
             "validators": []
         },
         "qnlogn": {
-            "index": 3,
+            "index": 4,
             "score": 23,
             "text": "$n \\le 1000$",
             "validators": []
         },        
         "full": {
-            "index": 4,
+            "index": 5,
             "score": 50,
             "text": "無額外限制",
             "validators": []

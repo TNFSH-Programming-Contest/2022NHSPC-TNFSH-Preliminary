@@ -20,6 +20,7 @@ int mxM;
 int mxQ;
 int mxW;
 int isTree;
+int isChain;
 
 const int N = 2e5+10;
 
@@ -37,7 +38,9 @@ signed main(signed argc, char* argv[]) {
 	mxQ = atoll(argv[3]);
 	mxW = atoll(argv[4]);
 	isTree = atoll(argv[5]);
+    isChain = atoll(argv[6]);
 
+    isTree |= isChain;
 	n = rnd.wnext(1LL, mxN, 3);
 	if (isTree) m = n-1;
 	else m = rnd.wnext(n-1, min(n*(n-1)/2, mxM), 5);
@@ -47,14 +50,29 @@ signed main(signed argc, char* argv[]) {
 		t = rnd.next(1LL, n);
 	} while (t == s);
 
-	// gen tree
-	rep(i,2,n)
-	{
-		int u = rnd.next(1LL, i-1);
-		int w = rnd.next(1LL, mxW);
-		G[u].insert(i);
-		edg.pb({{u, i}, w});
-	}
+    if (isChain)
+    {
+        vector<int> nodes;
+        rep(i,1,n) nodes.pb(i);
+        shuffle(nodes.begin(), nodes.end());
+        rep(i,1,nodes.size()-1)
+        {
+            int w = rnd.next(1LL, mxW);
+            G[nodes[i-1]].insert(nodes[i]);
+            edg.pb({{nodes[i-1], nodes[i]}, w});
+        }
+    }
+    else
+    {
+        // gen tree
+        rep(i,2,n)
+        {
+            int u = rnd.next(1LL, i-1);
+            int w = rnd.next(1LL, mxW);
+            G[u].insert(i);
+            edg.pb({{u, i}, w});
+        }
+    }
 	// randomly add edge
 	while (edg.size() < m)
 	{
