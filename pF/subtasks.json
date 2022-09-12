@@ -12,27 +12,27 @@
         "en": {
             "index": 1,
             "score": 13,
-            "text": "$1 \\le n,m,k \\le 5$",
+            "text": "$1 \\le n,~m,~k \\le 5$",
             "validators": []
-        },        
+        },
         "nmk": {
             "index": 2,
             "score": 21,
-            "text": "$1 \\le n,m,k \\le 100$",
+            "text": "$1 \\le n,~m,~k \\le 100$",
             "validators": []
         },
         "fib": {
             "index": 3,
             "score": 18,
-            "text": "$n,m = 1$",
+            "text": "$n,~m = 1$",
             "validators": []
-        },        
+        },
         "mmm": {
             "index": 4,
             "score": 35,
             "text": "$1 \\le m \\le 100$",
             "validators": []
-        },        
+        },
         "full": {
             "index": 5,
             "score": 13,
