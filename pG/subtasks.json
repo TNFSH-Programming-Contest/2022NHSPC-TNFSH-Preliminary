@@ -17,7 +17,7 @@
         },
         "we1": {
             "index": 2,
-            "score": 17,
+            "score": 15,
             "text": "$w=1$",
             "validators": []
         },
@@ -35,7 +35,7 @@
         },
         "full": {
             "index": 5,
-            "score": 50,
+            "score": 44,
             "text": "無額外限制",
             "validators": []
         }
