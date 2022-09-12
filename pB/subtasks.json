@@ -14,7 +14,7 @@
         "task1": {
             "index": 1,
             "score": 23,
-            "text": "$\\forall 1 \\leq i \\leq 2n, a_i$ 皆為奇數或皆為偶數",
+            "text": "$a_i$ 皆為奇數或皆為偶數",
             "validators": [
                 "task1_val.cpp"
             ]

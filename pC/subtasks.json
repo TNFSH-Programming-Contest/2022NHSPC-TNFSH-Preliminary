@@ -22,7 +22,7 @@
         "task2": {
             "index": 2,
             "score": 21,
-            "text": "$\\forall 1 \\leq i \\leq n, a_i=i$",
+            "text": "$a_i = i$",
             "validators": [
                 "task2_val.cpp"
             ]

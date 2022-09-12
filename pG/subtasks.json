@@ -1,5 +1,6 @@
 {
     "global_validators": [
+        "validator.cpp"
     ],
     "subtasks": {
         "samples": {
@@ -19,7 +20,7 @@
             "score": 17,
             "text": "$w=1$",
             "validators": []
-        },        
+        },
         "tree": {
             "index": 3,
             "score": 10,
@@ -31,7 +32,7 @@
             "score": 23,
             "text": "$n \\le 1000$",
             "validators": []
-        },        
+        },
         "full": {
             "index": 5,
             "score": 50,

@@ -9,9 +9,27 @@
             "text": "範例輸入輸出",
             "validators": []
         },
-        "full": {
+        "task1": {
             "index": 1,
-            "score": 100,
+            "score": 9,
+            "text": "$2 \\le n,m,q \\le 10^2$",
+            "validators": []
+        },        
+        "task2": {
+            "index": 2,
+            "score": 16,
+            "text": "$2 \\le n,m \\le 10^3$",
+            "validators": []
+        },
+        "task3": {
+            "index": 3,
+            "score": 39,
+            "text": "$q=1$，詢問在左上和右下",
+            "validators": []
+        },        
+        "task4": {
+            "index": 4,
+            "score": 36,
             "text": "無額外限制",
             "validators": []
         }

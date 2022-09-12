@@ -1,40 +1,68 @@
 AC.cpp
-solution            compile[WARN]
-0-01                sol[OK]    0.017     check[OK]        1  [Correct]             
-1-01                sol[OK]    0.032     check[OK]        1  [Correct]             
-1-02                sol[OK]    0.034     check[OK]        1  [Correct]             
-1-03                sol[OK]    0.032     check[OK]        1  [Correct]             
-1-04                sol[OK]    0.032     check[OK]        1  [Correct]             
-2-01                sol[FAIL]  2.022     check[SKIP]      0  [Time Limit Exceeded] 
-2-02                sol[FAIL]  2.138     check[SKIP]      0  [Time Limit Exceeded] 
-2-03                sol[FAIL]  2.120     check[SKIP]      0  [Time Limit Exceeded] 
-2-04                sol[FAIL]  2.073     check[SKIP]      0  [Time Limit Exceeded] 
-3-01                sol[FAIL]  2.809     check[SKIP]      0  [Time Limit Exceeded] 
-3-02                sol[FAIL]  2.902     check[SKIP]      0  [Time Limit Exceeded] 
-3-03                sol[FAIL]  2.935     check[SKIP]      0  [Time Limit Exceeded] 
-3-04                sol[FAIL]  2.910     check[SKIP]      0  [Time Limit Exceeded] 
-4-01                sol[FAIL]  2.876     check[SKIP]      0  [Time Limit Exceeded] 
-4-02                sol[FAIL]  2.851     check[SKIP]      0  [Time Limit Exceeded] 
-4-03                sol[FAIL]  2.886     check[SKIP]      0  [Time Limit Exceeded] 
-4-04                sol[FAIL]  2.795     check[SKIP]      0  [Time Limit Exceeded] 
-5-01                sol[FAIL]  3.009     check[SKIP]      0  [Time Limit Exceeded] 
-5-02                sol[FAIL]  3.009     check[SKIP]      0  [Time Limit Exceeded] 
-5-03                sol[FAIL]  3.011     check[SKIP]      0  [Time Limit Exceeded] 
-5-04                sol[FAIL]  3.008     check[SKIP]      0  [Time Limit Exceeded] 
-6-01                sol[FAIL]  3.009     check[SKIP]      0  [Time Limit Exceeded] 
-6-02                sol[FAIL]  3.009     check[SKIP]      0  [Time Limit Exceeded] 
-6-03                sol[FAIL]  3.009     check[SKIP]      0  [Time Limit Exceeded] 
-6-04                sol[FAIL]  3.010     check[SKIP]      0  [Time Limit Exceeded] 
-samples             [1/1 tests]    [Correct]             [0/0 pts]      [match with expected]             0-01
-task1               [4/4 tests]    [Correct]             [10/10 pts]    [match with expected]             1-01
-task2               [4/4 tests]    [Time Limit Exceeded] [0/10 pts]     [expected: model_solution]        2-01
-task3               [4/4 tests]    [Time Limit Exceeded] [0/20 pts]     [expected: model_solution]        3-01
-task4               [4/4 tests]    [Time Limit Exceeded] [0/20 pts]     [expected: model_solution]        4-01
-task5               [4/4 tests]    [Time Limit Exceeded] [0/20 pts]     [expected: model_solution]        5-01
-task6               [4/4 tests]    [Time Limit Exceeded] [0/20 pts]     [expected: model_solution]        6-01
+solution            compile[OK]
+0-01                sol[OK]    0.015     check[OK]        1  [Correct]               
+0-02                sol[OK]    0.015     check[OK]        1  [Correct]               
+1-01                sol[OK]    0.016     check[OK]        1  [Correct]               
+1-02                sol[OK]    0.016     check[OK]        1  [Correct]               
+1-03                sol[OK]    0.015     check[OK]        1  [Correct]               
+2-01                sol[OK]    0.016     check[OK]        1  [Correct]               
+2-02                sol[OK]    0.016     check[OK]        1  [Correct]               
+2-03                sol[OK]    0.015     check[OK]        1  [Correct]               
+3-01                sol[OK]    0.015     check[OK]        1  [Correct]               
+3-02                sol[OK]    0.016     check[OK]        1  [Correct]               
+3-03                sol[OK]    0.019     check[OK]        1  [Correct]               
+4-01                sol[OK]    0.016     check[OK]        1  [Correct]               
+4-02                sol[OK]    0.017     check[OK]        1  [Correct]               
+4-03                sol[OK]    0.016     check[OK]        1  [Correct]               
+5-01                sol[OK]    0.018     check[OK]        1  [Correct]               
+5-02                sol[OK]    0.025     check[OK]        1  [Correct]               
+5-03                sol[OK]    0.017     check[OK]        1  [Correct]               
+5-04                sol[OK]    0.020     check[OK]        1  [Correct]               
+5-05                sol[OK]    0.017     check[OK]        1  [Correct]               
+5-06                sol[OK]    0.018     check[OK]        1  [Correct]               
+samples             [2/2 tests]    [Correct]             [0/0 pts]      [match with expected]             0-01
+en                  [3/3 tests]    [Correct]             [13/13 pts]    [match with expected]             1-01
+nmk                 [3/3 tests]    [Correct]             [21/21 pts]    [match with expected]             2-01
+fib                 [3/3 tests]    [Correct]             [18/18 pts]    [match with expected]             3-01
+mmm                 [3/3 tests]    [Correct]             [35/35 pts]    [match with expected]             4-01
+full                [6/6 tests]    [Correct]             [13/13 pts]    [match with expected]             5-01
 
 Subtask summary
-10/100 pts
+100/100 pts
+
+Finished.
+
+dp.cpp
+solution            compile[OK]
+0-01                sol[OK]    0.015     check[OK]        1  [Correct]               
+0-02                sol[OK]    0.015     check[OK]        1  [Correct]               
+1-01                sol[OK]    0.015     check[OK]        1  [Correct]               
+1-02                sol[OK]    0.016     check[OK]        1  [Correct]               
+1-03                sol[OK]    0.016     check[OK]        1  [Correct]               
+2-01                sol[OK]    0.018     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-02                sol[OK]    0.016     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-03                sol[OK]    0.017     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-01                sol[FAIL]  0.236     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
+3-02                sol[FAIL]  0.231     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
+3-03                sol[FAIL]  0.230     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
+4-01                sol[FAIL]  0.283     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
+4-02                sol[FAIL]  0.298     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
+4-03                sol[FAIL]  0.248     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
+5-01                sol[FAIL]  0.485     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
+5-02                sol[FAIL]  0.988     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
+5-03                sol[FAIL]  0.385     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
+5-04                sol[FAIL]  0.540     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
+5-05                sol[FAIL]  0.337     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
+5-06                sol[FAIL]  0.526     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
+samples             [2/2 tests]    [Correct]             [0/0 pts]      [expected: time_limit]            0-01
+en                  [3/3 tests]    [Correct]             [13/13 pts]    [expected: time_limit]            1-01
+nmk                 [3/3 tests]    [Wrong Answer]        [0/21 pts]     [expected: time_limit]            2-01
+fib                 [3/3 tests]    [Runtime Error]       [0/18 pts]     [expected: time_limit]            3-01
+mmm                 [3/3 tests]    [Runtime Error]       [0/35 pts]     [expected: time_limit]            4-01
+full                [6/6 tests]    [Runtime Error]       [0/13 pts]     [expected: time_limit]            5-01
+
+Subtask summary
+13/100 pts
 
 Finished.
 

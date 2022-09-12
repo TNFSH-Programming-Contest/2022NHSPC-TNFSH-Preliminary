@@ -1,5 +1,8 @@
 {
-	"correct.cpp": {
+	"AC.cpp": {
 		"verdict": "model_solution"
+	},
+	"TLE.cpp": {
+		"verdict": "time_limit"
 	}
 }
