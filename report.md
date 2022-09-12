@@ -7,7 +7,7 @@
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | contest_name |  [:white_check_mark:](pA/problem.json) | [:white_check_mark:](pB/problem.json) | [:white_check_mark:](pC/problem.json) | [:white_check_mark:](pD/problem.json) | [:white_check_mark:](pE/problem.json) | [:white_check_mark:](pF/problem.json) | [:white_check_mark:](pG/problem.json) |
 | problem_label |  [:white_check_mark:](pA/problem.json) | [:white_check_mark:](pB/problem.json) | [:white_check_mark:](pC/problem.json) | [:white_check_mark:](pD/problem.json) | [:white_check_mark:](pE/problem.json) | [:white_check_mark:](pF/problem.json) | [:white_check_mark:](pG/problem.json) |
-| name |  [:white_check_mark:](pA/problem.json)<br>beater | [:white_check_mark:](pB/problem.json)<br>FRANXXParing | [:white_check_mark:](pC/problem.json)<br>ScorpioHunting | [:white_check_mark:](pD/problem.json)<br>TentsAndTrees | [:white_check_mark:](pE/problem.json)<br>Carla | [:white_check_mark:](pF/problem.json)<br>Nakiri | [:white_check_mark:](pG/problem.json)<br>LycoReco |
+| name |  [:white_check_mark:](pA/problem.json)<br>Beater | [:white_check_mark:](pB/problem.json)<br>FRANXXParing | [:white_check_mark:](pC/problem.json)<br>ScorpioHunting | [:white_check_mark:](pD/problem.json)<br>TentsAndTrees | [:white_check_mark:](pE/problem.json)<br>Carla | [:white_check_mark:](pF/problem.json)<br>Nakiri | [:white_check_mark:](pG/problem.json)<br>LycoReco |
 | title |  [:white_check_mark:](pA/problem.json)<br>封弊者 | [:white_check_mark:](pB/problem.json)<br>FRANXX 配對 | [:white_check_mark:](pC/problem.json)<br>討伐天蠍座 | [:white_check_mark:](pD/problem.json)<br>田野調查 | [:white_check_mark:](pE/problem.json)<br>超新手取向迷宮 | [:white_check_mark:](pF/problem.json)<br>百鬼今天想要開台 | [:white_check_mark:](pG/problem.json)<br>論拖延 |
 | memory_limit |  512 | 512 | 512 | 512 | 512 | 512 | 512 |
 | time_limit |  1.0 | 1.0 | 1.0 | 1.0 | 3.0 | 1.0 | 2.0 |
@@ -16,9 +16,9 @@
 | solution | [:white_check_mark:](pA/solution) | [:white_check_mark:](pB/solution) | [:white_check_mark:](pC/solution) | [:white_check_mark:](pD/solution) | [:white_check_mark:](pE/solution) | [:white_check_mark:](pF/solution) | [:white_check_mark:](pG/solution) |
 | validator | [:white_check_mark:](pA/validator) | [:white_check_mark:](pB/validator) | [:white_check_mark:](pC/validator) | [:white_check_mark:](pD/validator) | [:white_check_mark:](pE/validator) | [:white_check_mark:](pF/validator) | [:white_check_mark:](pG/validator) |
 | subtasks.json<br>global_validators |  [:white_check_mark:](pA/subtasks.json) | [:white_check_mark:](pB/subtasks.json) | [:white_check_mark:](pC/subtasks.json) | [:white_check_mark:](pD/subtasks.json) | [:white_check_mark:](pE/subtasks.json) | [:white_check_mark:](pF/subtasks.json) | [:white_check_mark:](pG/subtasks.json) |
-| tests | [:white_check_mark:](pA/tests) | [:white_check_mark:](pB/tests) | [:white_check_mark:](pC/tests)<br>[Auto build disabled](pC/gen/DISABLE_AUTO_BUILD) | [:white_check_mark:](pD/tests) | [:white_check_mark:](pE/tests)<br>[Auto build disabled](pE/gen/DISABLE_AUTO_BUILD) | [:white_check_mark:](pF/tests)<br>[Auto build disabled](pF/gen/DISABLE_AUTO_BUILD) | [:white_check_mark:](pG/tests) |
-| statement/index.md | [:white_check_mark:](pA/statement/index.md) | [:white_check_mark:](pB/statement/index.md) | [:white_check_mark:](pC/statement/index.md) | [:white_check_mark:](pD/statement/index.md) | [:x:](pE/statement/index.md) | [:x:](pF/statement/index.md) | [:white_check_mark:](pG/statement/index.md) |
-| statement/index.pdf | [:white_check_mark:](pA/statement/index.pdf)<br>[Auto build disabled](pA/statement/DISABLE_AUTO_BUILD) | [:white_check_mark:](pB/statement/index.pdf) | [:white_check_mark:](pC/statement/index.pdf) | [:white_check_mark:](pD/statement/index.pdf)<br>[Auto build disabled](pD/statement/DISABLE_AUTO_BUILD) | [:x:](pE/statement/index.pdf)<br>[Auto build disabled](pE/statement/DISABLE_AUTO_BUILD) | [:x:](pF/statement/index.pdf)<br>[Auto build disabled](pF/statement/DISABLE_AUTO_BUILD) | [:white_check_mark:](pG/statement/index.pdf) |
+| tests | [:white_check_mark:](pA/tests) | [:white_check_mark:](pB/tests) | [:white_check_mark:](pC/tests) | [:white_check_mark:](pD/tests) | [:white_check_mark:](pE/tests) | [:white_check_mark:](pF/tests) | [:white_check_mark:](pG/tests) |
+| statement/index.md | [:white_check_mark:](pA/statement/index.md) | [:white_check_mark:](pB/statement/index.md) | [:white_check_mark:](pC/statement/index.md) | [:white_check_mark:](pD/statement/index.md) | [:white_check_mark:](pE/statement/index.md) | [:white_check_mark:](pF/statement/index.md) | [:white_check_mark:](pG/statement/index.md) |
+| statement/index.pdf | [:white_check_mark:](pA/statement/index.pdf) | [:white_check_mark:](pB/statement/index.pdf) | [:white_check_mark:](pC/statement/index.pdf) | [:white_check_mark:](pD/statement/index.pdf) | [:x:](pE/statement/index.pdf) | [:x:](pF/statement/index.pdf) | [:white_check_mark:](pG/statement/index.pdf) |
 <!-- progress end -->
 
 ## Subtasks
@@ -29,8 +29,8 @@
 | B | 23<br>$a_i$ 皆為奇數或皆為偶數 | 77<br>無額外限制 |
 | C | 12<br>$1 \leq n \leq 7$ | 21<br>$a_i = i$ | 21<br>$1 \leq n \leq 1000$ | 46<br>無額外限制 |
 | D | 20<br>$n=m=2$ | 30<br>$n=1$ | 50<br>無額外限制 |
-| E | 9<br>$2 \le n,m,q \le 10^2$ | 16<br>$2 \le n,m \le 10^3$ | 39<br>$q=1$，詢問在左上和右下 | 36<br>無額外限制 |
-| F | 13<br>$1 \le n,m,k \le 5$ | 21<br>$1 \le n,m,k \le 100$ | 18<br>$n,m = 1$ | 35<br>$1 \le m \le 100$ | 13<br>無額外限制 |
+| E | 9<br>$2 \le n,~m,~q \le 10^2$ | 16<br>$2 \le n,~m \le 10^3$ | 39<br>$q = 1$，詢問在左上和右下 | 36<br>無額外限制 |
+| F | 13<br>$1 \le n,~m,~k \le 5$ | 21<br>$1 \le n,~m,~k \le 100$ | 18<br>$n,~m = 1$ | 35<br>$1 \le m \le 100$ | 13<br>無額外限制 |
 | G | 8<br>保證是一條鏈 | 15<br>$w=1$ | 10<br>$m = n-1$ | 23<br>$n \le 1000$ | 44<br>無額外限制 |
 <!-- subtasks end -->
 
