@@ -1,6 +1,8 @@
 
 ## Progress
 <!-- progress start -->
+- cover.tex [:x:](cover.tex)
+
 | | A | B | C | D | E | F | G |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | contest_name |  [:white_check_mark:](pA/problem.json) | [:white_check_mark:](pB/problem.json) | [:white_check_mark:](pC/problem.json) | [:white_check_mark:](pD/problem.json) | [:white_check_mark:](pE/problem.json) | [:white_check_mark:](pF/problem.json) | [:white_check_mark:](pG/problem.json) |
