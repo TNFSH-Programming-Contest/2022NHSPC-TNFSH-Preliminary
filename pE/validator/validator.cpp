@@ -24,6 +24,7 @@ int main()
 		inf.readEoln();
 	}
 	q=inf.readInt(1,100000);
+	inf.readEoln();
 	for(int i=0;i<q;i++)
 	{
 		a=inf.readInt(1,n);

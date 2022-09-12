@@ -26,8 +26,10 @@ signed main()
 				if(j*2+arr[x]>m)
 					continue;
 				dp[i+1][j*2+arr[x]]+=dp[i][j];
+				dp[i+1][j*2+arr[x]]%=iris;
 			}
 			dp[i+1][0]+=dp[i][j];
+			dp[i+1][0]%=iris;
 		}
 	}
 	cout<<dp[k+1][0]<<'\n';
