@@ -13,25 +13,25 @@
             "index": 1,
             "score": 8,
             "text": "保證是一條鏈",
-            "validators": []
+            "validators": ["chain.cpp"]
         },
         "we1": {
             "index": 2,
             "score": 15,
             "text": "$w=1$",
-            "validators": []
+            "validators": ["we1.cpp"]
         },
         "tree": {
             "index": 3,
             "score": 10,
             "text": "$m = n-1$",
-            "validators": []
+            "validators": ["tree.cpp"]
         },
         "qnlogn": {
             "index": 4,
             "score": 23,
             "text": "$n \\le 1000$",
-            "validators": []
+            "validators": ["qnlogn.cpp"]
         },
         "full": {
             "index": 5,

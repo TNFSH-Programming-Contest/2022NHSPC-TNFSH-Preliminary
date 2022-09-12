@@ -1,11 +1,9 @@
 // By xiplus
 #include "testlib.h"
-#include <utility>
-#include <set>
 using namespace std;
 
 int v[200005];
-set< pair<int ,int> > edgs;
+int deg[200005];
 
 int find(int a) {
 	if (v[a] == a) return a;
@@ -40,19 +38,15 @@ int main() {
 	ensure(s != t);
 
 	for (int i = 0; i < m; i++) {
-
 		int u = inf.readInt(1, n);
 		inf.readSpace();
 		int v = inf.readInt(1, n);
 		inf.readSpace();
-		inf.readInt(1, 1000000000, "w");
+		int w = inf.readInt(1, 1000000000, "w");
 		inf.readEoln();
 
 		merge(u, v);
-
-        ensuref(u!=v, "self cycle found");
-        ensuref(edgs.find({min(u,v), max(u,v)}) == edgs.end(), "multi-edges found");
-        edgs.insert({min(u, v), max(u,v)});
+        ensuref(w==1, "w should be 1");
 	}
 
 	for (int i = 2; i <= n; i++) {
