@@ -11,7 +11,7 @@
 | time_limit |  1.0 | 1.0 | 1.0 | 1.0 | 3.0 | 1.0 | 2.0 |
 | has_checker |  False | False | False | True | False | False | False |
 | gen | [:white_check_mark:](pA/gen) | [:white_check_mark:](pB/gen) | [:white_check_mark:](pC/gen) | [:white_check_mark:](pD/gen) | [:white_check_mark:](pE/gen) | [:white_check_mark:](pF/gen) | [:white_check_mark:](pG/gen) |
-| solution | [:white_check_mark:](pA/solution) | [:white_check_mark:](pB/solution) | [:white_check_mark:](pC/solution) | [:white_check_mark:](pD/solution) | [:white_check_mark:](pE/solution) | [:x:](pF/solution)<br>[correct.cpp](pF/solution/correct.cpp) | [:white_check_mark:](pG/solution) |
+| solution | [:white_check_mark:](pA/solution) | [:white_check_mark:](pB/solution) | [:white_check_mark:](pC/solution) | [:white_check_mark:](pD/solution) | [:white_check_mark:](pE/solution) | [:white_check_mark:](pF/solution) | [:white_check_mark:](pG/solution) |
 | validator | [:white_check_mark:](pA/validator) | [:white_check_mark:](pB/validator) | [:white_check_mark:](pC/validator) | [:white_check_mark:](pD/validator) | [:white_check_mark:](pE/validator) | [:white_check_mark:](pF/validator) | [:white_check_mark:](pG/validator) |
 | subtasks.json<br>global_validators |  [:white_check_mark:](pA/subtasks.json) | [:white_check_mark:](pB/subtasks.json) | [:white_check_mark:](pC/subtasks.json) | [:white_check_mark:](pD/subtasks.json) | [:white_check_mark:](pE/subtasks.json) | [:white_check_mark:](pF/subtasks.json) | [:white_check_mark:](pG/subtasks.json) |
 | tests | [:white_check_mark:](pA/tests) | [:white_check_mark:](pB/tests) | [:white_check_mark:](pC/tests) | [:white_check_mark:](pD/tests) | [:white_check_mark:](pE/tests) | [:white_check_mark:](pF/tests) | [:white_check_mark:](pG/tests) |
