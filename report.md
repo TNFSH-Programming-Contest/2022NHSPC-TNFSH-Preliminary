@@ -10,7 +10,7 @@
 | name |  [:white_check_mark:](pA/problem.json)<br>Beater | [:white_check_mark:](pB/problem.json)<br>FRANXXParing | [:white_check_mark:](pC/problem.json)<br>ScorpioHunting | [:white_check_mark:](pD/problem.json)<br>TentsAndTrees | [:white_check_mark:](pE/problem.json)<br>Carla | [:white_check_mark:](pF/problem.json)<br>Nakiri | [:white_check_mark:](pG/problem.json)<br>LycoReco |
 | title |  [:white_check_mark:](pA/problem.json)<br>封弊者 | [:white_check_mark:](pB/problem.json)<br>FRANXX 配對 | [:white_check_mark:](pC/problem.json)<br>討伐天蠍座 | [:white_check_mark:](pD/problem.json)<br>田野調查 | [:white_check_mark:](pE/problem.json)<br>超新手取向迷宮 | [:white_check_mark:](pF/problem.json)<br>百鬼今天想要開台 | [:white_check_mark:](pG/problem.json)<br>論拖延 |
 | memory_limit |  512 | 512 | 512 | 512 | 512 | 512 | 512 |
-| time_limit |  1.0 | 1.0 | 1.0 | 1.0 | 3.0 | 1.0 | 2.0 |
+| time_limit |  1.0 | 1.0 | 1.0 | 1.0 | 3.0 | 1.0 | 3.0 |
 | has_checker |  False | False | False | True | False | False | False |
 | gen | [:white_check_mark:](pA/gen) | [:white_check_mark:](pB/gen) | [:white_check_mark:](pC/gen) | [:white_check_mark:](pD/gen) | [:white_check_mark:](pE/gen) | [:white_check_mark:](pF/gen) | [:white_check_mark:](pG/gen) |
 | solution | [:white_check_mark:](pA/solution) | [:white_check_mark:](pB/solution) | [:white_check_mark:](pC/solution) | [:white_check_mark:](pD/solution) | [:white_check_mark:](pE/solution) | [:white_check_mark:](pF/solution) | [:white_check_mark:](pG/solution) |
@@ -31,7 +31,7 @@
 | D | 20<br>$n=m=2$ | 30<br>$n=1$ | 50<br>無額外限制 |
 | E | 7<br>$2 \le n,~m,~q \le 10^2$ | 18<br>$2 \le n,~m \le 10^3$ | 39<br>$q = 1$，詢問在左上和右下 | 36<br>無額外限制 |
 | F | 13<br>$1 \le n,~m,~k \le 5$ | 28<br>$1 \le n,~m,~k \le 100$ | 17<br>$n,~m = 1$ | 29<br>$1 \le m \le 100$ | 13<br>無額外限制 |
-| G | 8<br>保證是一條鏈 | 15<br>$w=1$ | 10<br>$m = n-1$ | 23<br>$n \le 1000$ | 44<br>無額外限制 |
+| G | 8<br>保證是一條鏈 | 15<br>$w=1$ | 10<br>$m = n-1$ | 23<br>$n \le 500$ | 44<br>無額外限制 |
 <!-- subtasks end -->
 
 ## Scores
