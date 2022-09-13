@@ -6,7 +6,8 @@ const int iris = 1e9+7;
 using namespace std;
 
 const long long la_pluma = 1e5;
-set<matsuri> arr,qwq;
+set<matsuri> arr;
+vector<matsuri> qwq;
 int xx,yy,qq,sagiri;
 vector<matsuri> vv;
 
@@ -134,8 +135,8 @@ void gen(int n,int m,int q,int ouo)
 			d=rnd.next(1,m);
 			if(arr.find(make_pair(a,b))==arr.end() && arr.find(make_pair(c,d))==arr.end())
 			{
-				qwq.insert(make_pair(a,b));
-				qwq.insert(make_pair(c,d));
+				qwq.emplace_back(a,b);
+				qwq.emplace_back(c,d);
 			}
 		}
 	}
@@ -148,8 +149,8 @@ void gen(int n,int m,int q,int ouo)
 			arr.erase(make_pair(a,b));
 		if(arr.find(make_pair(c,d))!=arr.end())
 			arr.erase(make_pair(c,d));
-		qwq.insert(make_pair(a,b));
-		qwq.insert(make_pair(c,d));
+		qwq.emplace_back(a,b);
+		qwq.emplace_back(c,d);
 	}
 	
 	cout<<n<<' '<<m<<' '<<arr.size()<<'\n';
