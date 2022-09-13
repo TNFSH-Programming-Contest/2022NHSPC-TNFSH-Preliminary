@@ -30,7 +30,7 @@
         "qnlogn": {
             "index": 4,
             "score": 23,
-            "text": "$n \\le 1000$",
+            "text": "$n \\le 500$",
             "validators": ["qnlogn.cpp"]
         },
         "full": {
