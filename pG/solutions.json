@@ -2,6 +2,9 @@
 	"correct.cpp": {
 		"verdict": "model_solution"
 	},
+	"correct_multi_mod.cpp": {
+		"verdict": "correct"
+	},
 	"bruteforce.cpp":{
 		"verdict": "time_limit"
 	}
