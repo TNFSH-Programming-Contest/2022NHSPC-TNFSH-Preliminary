@@ -1,31 +1,35 @@
 AC.cpp
 solution            compile[OK]
-0-01                sol[OK]    0.013     check[OK]        1  [Correct]               
+0-01                sol[OK]    0.014     check[OK]        1  [Correct]               
 0-02                sol[OK]    0.013     check[OK]        1  [Correct]               
 1-01                sol[OK]    0.013     check[OK]        1  [Correct]               
 1-02                sol[OK]    0.013     check[OK]        1  [Correct]               
 1-03                sol[OK]    0.013     check[OK]        1  [Correct]               
 2-01                sol[OK]    0.013     check[OK]        1  [Correct]               
-2-02                sol[OK]    0.013     check[OK]        1  [Correct]               
-2-03                sol[OK]    0.013     check[OK]        1  [Correct]               
-3-01                sol[OK]    0.013     check[OK]        1  [Correct]               
+2-02                sol[OK]    0.014     check[OK]        1  [Correct]               
+2-03                sol[OK]    0.014     check[OK]        1  [Correct]               
+3-01                sol[OK]    0.014     check[OK]        1  [Correct]               
 3-02                sol[OK]    0.014     check[OK]        1  [Correct]               
-3-03                sol[OK]    0.013     check[OK]        1  [Correct]               
+3-03                sol[OK]    0.014     check[OK]        1  [Correct]               
 4-01                sol[OK]    0.014     check[OK]        1  [Correct]               
 4-02                sol[OK]    0.014     check[OK]        1  [Correct]               
-4-03                sol[OK]    0.013     check[OK]        1  [Correct]               
+4-03                sol[OK]    0.014     check[OK]        1  [Correct]               
+4-04                sol[OK]    0.014     check[OK]        1  [Correct]               
+4-05                sol[OK]    0.014     check[OK]        1  [Correct]               
 5-01                sol[OK]    0.016     check[OK]        1  [Correct]               
-5-02                sol[OK]    0.020     check[OK]        1  [Correct]               
+5-02                sol[OK]    0.021     check[OK]        1  [Correct]               
 5-03                sol[OK]    0.015     check[OK]        1  [Correct]               
 5-04                sol[OK]    0.016     check[OK]        1  [Correct]               
-5-05                sol[OK]    0.014     check[OK]        1  [Correct]               
+5-05                sol[OK]    0.015     check[OK]        1  [Correct]               
 5-06                sol[OK]    0.016     check[OK]        1  [Correct]               
+5-07                sol[OK]    0.021     check[OK]        1  [Correct]               
+5-08                sol[OK]    0.022     check[OK]        1  [Correct]               
 samples             [2/2 tests]    [Correct]             [0/0 pts]      [match with expected]             0-01
 en                  [3/3 tests]    [Correct]             [13/13 pts]    [match with expected]             1-01
 nmk                 [3/3 tests]    [Correct]             [28/28 pts]    [match with expected]             2-01
 fib                 [3/3 tests]    [Correct]             [17/17 pts]    [match with expected]             3-01
-mmm                 [3/3 tests]    [Correct]             [29/29 pts]    [match with expected]             4-01
-full                [6/6 tests]    [Correct]             [13/13 pts]    [match with expected]             5-01
+mmm                 [5/5 tests]    [Correct]             [29/29 pts]    [match with expected]             4-01
+full                [8/8 tests]    [Correct]             [13/13 pts]    [match with expected]             5-01
 
 Subtask summary
 100/100 pts
@@ -37,29 +41,33 @@ solution            compile[OK]
 0-01                sol[OK]    0.013     check[OK]        1  [Correct]               
 0-02                sol[OK]    0.013     check[OK]        1  [Correct]               
 1-01                sol[OK]    0.013     check[OK]        1  [Correct]               
-1-02                sol[OK]    0.013     check[OK]        1  [Correct]               
-1-03                sol[OK]    0.014     check[OK]        1  [Correct]               
+1-02                sol[OK]    0.014     check[OK]        1  [Correct]               
+1-03                sol[OK]    0.013     check[OK]        1  [Correct]               
 2-01                sol[OK]    0.014     check[OK]        1  [Correct]               
 2-02                sol[OK]    0.013     check[OK]        1  [Correct]               
-2-03                sol[OK]    0.014     check[OK]        1  [Correct]               
-3-01                sol[FAIL]  0.202     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
+2-03                sol[OK]    0.016     check[OK]        1  [Correct]               
+3-01                sol[FAIL]  0.203     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
 3-02                sol[FAIL]  0.197     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
-3-03                sol[FAIL]  0.198     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
-4-01                sol[FAIL]  0.249     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
-4-02                sol[FAIL]  0.264     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
+3-03                sol[FAIL]  0.212     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
+4-01                sol[FAIL]  0.260     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
+4-02                sol[FAIL]  0.267     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
 4-03                sol[FAIL]  0.218     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
-5-01                sol[FAIL]  0.470     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
-5-02                sol[FAIL]  0.972     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
-5-03                sol[FAIL]  0.364     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
-5-04                sol[FAIL]  0.524     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
-5-05                sol[FAIL]  0.309     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
-5-06                sol[FAIL]  0.520     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
+4-04                sol[FAIL]  0.211     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
+4-05                sol[FAIL]  0.307     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
+5-01                sol[FAIL]  0.471     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
+5-02                sol[FAIL]  0.976     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
+5-03                sol[FAIL]  0.362     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
+5-04                sol[FAIL]  0.528     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
+5-05                sol[FAIL]  0.316     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
+5-06                sol[FAIL]  0.518     check[SKIP]      0  [Runtime Error]         solution finished with exit code 139
+5-07                sol[FAIL]  1.088     check[SKIP]      0  [Time Limit Exceeded]   solution finished after time limit '1.0', with exit code '139'
+5-08                sol[FAIL]  1.098     check[SKIP]      0  [Time Limit Exceeded]   solution finished after time limit '1.0', with exit code '139'
 samples             [2/2 tests]    [Correct]             [0/0 pts]      [expected: time_limit]            0-01
 en                  [3/3 tests]    [Correct]             [13/13 pts]    [expected: time_limit]            1-01
 nmk                 [3/3 tests]    [Correct]             [28/28 pts]    [expected: time_limit]            2-01
 fib                 [3/3 tests]    [Runtime Error]       [0/17 pts]     [expected: time_limit]            3-01
-mmm                 [3/3 tests]    [Runtime Error]       [0/29 pts]     [expected: time_limit]            4-01
-full                [6/6 tests]    [Runtime Error]       [0/13 pts]     [expected: time_limit]            5-01
+mmm                 [5/5 tests]    [Runtime Error]       [0/29 pts]     [expected: time_limit]            4-01
+full                [8/8 tests]    [Runtime Error]       [0/13 pts]     [expected: time_limit]            5-01
 
 Subtask summary
 41/100 pts
