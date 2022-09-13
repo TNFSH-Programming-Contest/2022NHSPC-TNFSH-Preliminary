@@ -21,6 +21,8 @@ gen 3 3
 gen 4 1
 gen 4 2
 gen 4 3
+gen 4 4
+gen 4 5
 
 @subtask full
 gen 5 1
@@ -29,3 +31,5 @@ gen 5 3
 gen 5 4
 gen 5 5
 gen 5 6
+gen 5 7
+gen 5 8
