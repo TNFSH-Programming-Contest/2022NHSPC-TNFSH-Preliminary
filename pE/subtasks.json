@@ -11,13 +11,13 @@
         },
         "task1": {
             "index": 1,
-            "score": 9,
+            "score": 7,
             "text": "$2 \\le n,~m,~q \\le 10^2$",
             "validators": []
         },
         "task2": {
             "index": 2,
-            "score": 16,
+            "score": 18,
             "text": "$2 \\le n,~m \\le 10^3$",
             "validators": []
         },

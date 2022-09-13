@@ -77,7 +77,7 @@ signed main()
 		{
 			a=x+dir[i][0];
 			b=y+dir[i][1];
-			if(a>=0 && a<=n && b>=0 && b<=m && arr.find(make_pair(a,b))==arr.end())
+			if(a>=1 && a<=n && b>=1 && b<=m && arr.find(make_pair(a,b))==arr.end())
 				add(a,b);
 		}
 	}

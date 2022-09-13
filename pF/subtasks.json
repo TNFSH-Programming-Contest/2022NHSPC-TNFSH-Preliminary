@@ -17,19 +17,19 @@
         },
         "nmk": {
             "index": 2,
-            "score": 21,
+            "score": 28,
             "text": "$1 \\le n,~m,~k \\le 100$",
             "validators": []
         },
         "fib": {
             "index": 3,
-            "score": 18,
+            "score": 17,
             "text": "$n,~m = 1$",
             "validators": []
         },
         "mmm": {
             "index": 4,
-            "score": 35,
+            "score": 29,
             "text": "$1 \\le m \\le 100$",
             "validators": []
         },
