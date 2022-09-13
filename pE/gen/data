@@ -18,9 +18,16 @@ gen 3 1
 gen 3 2
 gen 3 3
 gen 3 4
+gen 3 5
+gen 3 6
+gen 3 7
 
 @subtask task4
 gen 4 1
 gen 4 2
 gen 4 3
 gen 4 4
+gen 4 5
+gen 4 6
+gen 4 7
+gen 3 8
