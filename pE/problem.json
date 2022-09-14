@@ -4,7 +4,7 @@
 	"name": "Carla",
 	"title": "超新手取向迷宮",
 	"memory_limit": 512,
-	"time_limit": 3.0,
+	"time_limit": 5.0,
 	"type": "Batch",
 	"description": "",
 	"tps_web_url": "",
