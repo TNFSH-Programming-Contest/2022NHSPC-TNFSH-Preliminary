@@ -28,8 +28,6 @@
 ## 子任務
 \subtasks
 
-\clearpage
-
 ## 範例輸入 1
 \testfile{0-01.in}
 
