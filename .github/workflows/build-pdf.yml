@@ -11,8 +11,9 @@ on:
       - '*/statement/index.md'
       - '*/problem.json'
       - '*/subtasks.json'
-      - 'template.tex'
+      - 'appendix.tex'
       - 'cover.tex'
+      - 'template.tex'
   workflow_dispatch:
     inputs:
       problems:
