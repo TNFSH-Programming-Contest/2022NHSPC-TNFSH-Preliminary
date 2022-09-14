@@ -1,11 +1,6 @@
-.PHONY: statement tests
+.PHONY: statement
 
 statement: statement/index.pdf
 
-tests: tests/*.in tests/*.out
-
-statement/index.pdf: statement/index.md statement/*.jpg problem.json subtasks.json
+statement/index.pdf: statement/index.md $(wildcard statement/*.jpg statement/*.png) problem.json subtasks.json ../template.tex
 	tps statement
-
-tests/*.in tests/*.out: gen/** gen/manual/** solution/**
-	tps gen -s
