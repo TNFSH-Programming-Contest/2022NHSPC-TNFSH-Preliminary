@@ -11,7 +11,7 @@
 using namespace std;
 typedef pair<int,int> pii;
 
-const int N = 1e5+10;
+const int N = 510;
 
 int n, m, s, t, q;
 
