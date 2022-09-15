@@ -11,13 +11,13 @@
         },
         "neme2": {
             "index": 1,
-            "score": 17,
+            "score": 11,
             "text": "$n=m=2$",
             "validators": []
         },
         "ne1": {
             "index": 2,
-            "score": 16,
+            "score": 12,
             "text": "$n=1$",
             "validators": []
         },
