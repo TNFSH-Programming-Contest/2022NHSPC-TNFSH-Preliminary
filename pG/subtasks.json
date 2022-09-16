@@ -15,17 +15,17 @@
             "text": "保證是一條鏈",
             "validators": ["chain.cpp"]
         },
-        "we1": {
-            "index": 2,
-            "score": 15,
-            "text": "$w=1$",
-            "validators": ["we1.cpp"]
-        },
         "tree": {
-            "index": 3,
+            "index": 2,
             "score": 10,
             "text": "$m = n-1$",
             "validators": ["tree.cpp"]
+        },
+        "we1": {
+            "index": 3,
+            "score": 15,
+            "text": "$w=1 且 n, m \\le 500$",
+            "validators": ["we1.cpp"]
         },
         "qnlogn": {
             "index": 4,
