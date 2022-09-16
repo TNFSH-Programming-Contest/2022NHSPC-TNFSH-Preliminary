@@ -18,19 +18,19 @@
         "tree": {
             "index": 2,
             "score": 10,
-            "text": "$m = n-1$",
+            "text": "$m = n - 1$",
             "validators": ["tree.cpp"]
         },
         "we1": {
             "index": 3,
             "score": 15,
-            "text": "$w=1 且 n, m \\le 500$",
+            "text": "$w=1$ 且 $n,~m \\le 500$",
             "validators": ["we1.cpp"]
         },
         "qnlogn": {
             "index": 4,
             "score": 23,
-            "text": "$n, m\\le 500$",
+            "text": "$n,~m \\le 500$",
             "validators": ["qnlogn.cpp"]
         },
         "full": {
