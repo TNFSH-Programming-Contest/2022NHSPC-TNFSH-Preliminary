@@ -1,0 +1,13 @@
+name: Dump ranking
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: 'URL to ranking'
+
+jobs:
+  run:
+    uses: TNFSH-Programming-Contest/tps-actions/.github/workflows/dump-ranking.yml@main
+    with:
+      url: ${{ inputs.url }}
