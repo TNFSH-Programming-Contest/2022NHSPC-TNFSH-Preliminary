@@ -22,9 +22,9 @@ int main() {
 	registerValidation();
 	// about testlib, see https://codeforces.com/blog/entry/18426
 
-	int n = inf.readInt(1, 200000);
+	int n = inf.readInt(1, 500);
 	inf.readSpace();
-	int m = inf.readInt(1, 1000000);
+	int m = inf.readInt(1, 500);
 	inf.readSpace();
 	int s = inf.readInt(1, n);
 	inf.readSpace();
@@ -42,11 +42,10 @@ int main() {
 		inf.readSpace();
 		int v = inf.readInt(1, n);
 		inf.readSpace();
-		int w = inf.readInt(1, 1000000000, "w");
+		int w = inf.readInt(1, 1, "w");
 		inf.readEoln();
 
 		merge(u, v);
-        ensuref(w==1, "w should be 1");
 	}
 
 	for (int i = 2; i <= n; i++) {

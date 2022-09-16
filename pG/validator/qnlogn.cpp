@@ -21,9 +21,9 @@ int main() {
 	registerValidation();
 	// about testlib, see https://codeforces.com/blog/entry/18426
 
-	int n = inf.readInt(1, 1000);
+	int n = inf.readInt(1, 500);
 	inf.readSpace();
-	int m = inf.readInt(1, 1000000);
+	int m = inf.readInt(1, 500);
 	inf.readSpace();
 	int s = inf.readInt(1, n);
 	inf.readSpace();
