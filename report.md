@@ -1,7 +1,7 @@
 
 ## Progress
 <!-- progress start -->
-- cover.tex [:x:](cover.tex)
+- cover.tex [:white_check_mark:](cover.tex)
 - appendix.tex [:white_check_mark:](appendix.tex)
 
 | | A | B | C | D | E | F | G |
