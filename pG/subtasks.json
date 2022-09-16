@@ -11,13 +11,13 @@
         },
         "chain": {
             "index": 1,
-            "score": 8,
+            "score": 9,
             "text": "保證是一條鏈",
             "validators": ["chain.cpp"]
         },
         "tree": {
             "index": 2,
-            "score": 10,
+            "score": 12,
             "text": "$m = n - 1$",
             "validators": ["tree.cpp"]
         },
@@ -29,13 +29,13 @@
         },
         "qnlogn": {
             "index": 4,
-            "score": 23,
+            "score": 17,
             "text": "$n,~m \\le 500$",
             "validators": ["qnlogn.cpp"]
         },
         "full": {
             "index": 5,
-            "score": 44,
+            "score": 47,
             "text": "無額外限制",
             "validators": []
         }
