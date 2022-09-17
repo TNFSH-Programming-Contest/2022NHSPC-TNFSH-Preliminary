@@ -1,0 +1,15 @@
+exclude:
+  - pA/scripts/
+  - pA/tests/
+  - pB/scripts/
+  - pB/tests/
+  - pC/scripts/
+  - pC/tests/
+  - pD/scripts/
+  - pD/tests/
+  - pE/scripts/
+  - pE/tests/
+  - pF/scripts/
+  - pF/tests/
+  - pG/scripts/
+  - pG/tests/
