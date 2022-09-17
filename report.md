@@ -20,10 +20,12 @@
 | tests | [:white_check_mark:](pA/tests) | [:white_check_mark:](pB/tests) | [:white_check_mark:](pC/tests) | [:white_check_mark:](pD/tests) | [:white_check_mark:](pE/tests) | [:white_check_mark:](pF/tests) | [:white_check_mark:](pG/tests) |
 | statement/index.md | [:white_check_mark:](pA/statement/index.md) | [:white_check_mark:](pB/statement/index.md) | [:white_check_mark:](pC/statement/index.md) | [:white_check_mark:](pD/statement/index.md) | [:white_check_mark:](pE/statement/index.md) | [:white_check_mark:](pF/statement/index.md) | [:white_check_mark:](pG/statement/index.md) |
 | statement/index.pdf | [:white_check_mark:](pA/statement/index.pdf) | [:white_check_mark:](pB/statement/index.pdf) | [:white_check_mark:](pC/statement/index.pdf) | [:white_check_mark:](pD/statement/index.pdf) | [:white_check_mark:](pE/statement/index.pdf) | [:white_check_mark:](pF/statement/index.pdf) | [:white_check_mark:](pG/statement/index.pdf) |
+
 <!-- progress end -->
 
 ## Subtasks
 <!-- subtasks start -->
+
 | | 1 | 2 | 3 | 4 | 5 |
 | --- | --- | --- | --- | --- | --- |
 | A | 100<br>無額外限制 |
@@ -33,10 +35,12 @@
 | E | 7<br>$2 \le n,~m,~q \le 10^2$ | 18<br>$2 \le n,~m \le 10^3$ | 39<br>$q = 1$，詢問在左上和右下 | 36<br>無額外限制 |
 | F | 13<br>$1 \le n,~m,~k \le 5$ | 28<br>$1 \le n,~m,~k \le 100$ | 17<br>$n,~m = 1$ | 29<br>$1 \le m \le 100$ | 13<br>無額外限制 |
 | G | 9<br>保證是一條鏈 | 12<br>$m = n - 1$ | 15<br>$w=1$ 且 $n,~m \le 500$ | 17<br>$n,~m \le 500$ | 47<br>無額外限制 |
+
 <!-- subtasks end -->
 
 ## Scores
 <!-- scores start -->
+
 | score | count | groups |
 | --- | --- | --- |
 | 12 | 3 | (C1) (D2) (G2) |
@@ -216,4 +220,5 @@
 | 216 | 2 | (A1, B2, E3) (A1, D3, E3) |
 | 223 | 2 | (A1, B2, C4) (A1, C4, D3) |
 | 224 | 2 | (A1, B2, G5) (A1, D3, G5) |
+
 <!-- scores end -->
