@@ -12,6 +12,15 @@ gen 1 h8x7ddnd9zg9woa
 gen 1 max c3uk5tjoul5o76e
 gen 1 max nlbvu30zz00q9yt
 gen 1 max 0ac6hc9vjv9o96t
+manual gpt1.in
+manual gpt2.in
+manual gpt3.in
+manual gpt4.in
+manual gpt5.in
+manual gpt6.in
+manual gpt7.in
+manual gpt8.in
+manual gpt9.in
 
 @subtask task2
 gen 2 kw6fnlqwklg6k1j
@@ -38,6 +47,7 @@ gen 3 max y0o8ph1fcg4fnnj
 gen 3 max l8e18goyjk8yhqc
 
 @subtask task4
+@include task1
 gen 4 5qdmlc6xzf3q7gs
 gen 4 vfep8yj35rtk6m3
 gen 4 4pjv889wxe50hfo

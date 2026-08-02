@@ -1,5 +1,11 @@
 {
 	"ac.cpp": {
 		"verdict": "model_solution"
+	},
+	"chal295395.cpp": {
+		"verdict": "incorrect",
+		"except": {
+			"samples": "correct"
+		}
 	}
 }
