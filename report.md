@@ -1,6 +1,7 @@
 
 ## Progress
 <!-- progress start -->
+
 - cover.tex [:white_check_mark:](cover.tex)
 - appendix.tex [:white_check_mark:](appendix.tex)
 
